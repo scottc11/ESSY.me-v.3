@@ -10,9 +10,9 @@ from .serializers import projectSerializer
 
 # Create your views here.
 def home(request):
-    projects = Post.objects.order_by('pub_date')
+    projects = Project.objects.order_by('pub_date')
     context = { 'projects': projects }
-    return render(request, 'home/templates/home.html', context)
+    return render(request, 'home.html', context)
 
 
 # ------ API --------

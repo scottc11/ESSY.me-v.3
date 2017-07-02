@@ -6,7 +6,7 @@ from home.views import projectsList, home
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^/', home),
+    url(r'^home/', home),
     url(r'^projects/', projectsList.as_view())
 ]
 
