@@ -4,7 +4,8 @@
   "description": "portfolio website",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "pack": "./node_modules/.bin/webpack --config webpack.config.js",
+    "start": "./node_modules/.bin/webpack --config webpack.config.js --watch",
     "test": ""
   },
   "author": "Scott Campbell",
