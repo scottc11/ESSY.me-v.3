@@ -1,7 +1,21 @@
 {% load render_bundle from webpack_loader %}
 
-<h1>This is Home</h1>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
 
-<div id="container">
-  {% render_bundle 'main' %}
-</div>
+  <body>
+
+    <h1>This is Home</h1>
+
+    <div id="app">
+      {% render_bundle 'main' %}
+    </div>
+
+  </body>
+
+  <footer>
+
+  </footer>
+</html>

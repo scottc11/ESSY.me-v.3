@@ -1,1 +1,1 @@
-{"status":"done","chunks":{"main":[{"name":"bundle.js","path":"/Users/scottcampbell/Desktop/ESSY.me/essy/assets/bundles/bundle.js"}]}}
+{"status":"done","chunks":{"main":[{"name":"bundle.js","path":"/Users/scottcampbell/Desktop/ESSY.me/essy/assets/bundles/bundle.js"}]},"error":"ModuleBuildError","message":"Module build failed: SyntaxError: Adjacent JSX elements must be wrapped in an enclosing tag (10:4)\n\n   8 |   return (\n   9 |     <div>Hi!!!</div>\n> 10 |     <SearchBar />\n     |     ^\n  11 |   );\n  12 | }\n  13 | \n"}
