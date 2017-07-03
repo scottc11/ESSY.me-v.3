@@ -1,4 +1,4 @@
-# Project Title
+# ESSY.me
 
 Website built using Django + React via webpack.
 
@@ -9,8 +9,21 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
+Install React/Node dependencies
 ```
 npm install
+```
+Install python dependencies
+```
+pip install
+```
+
+### Running locally
+
+Start the django server
+
+```
+python manage.py runserver
 ```
 
 run the --watch command on webpack to auto generate new bundle.js files when changes are detected in your code.  Terminal command located in package.json.
