@@ -1,1 +1,7 @@
+{% load render_bundle from webpack_loader %}
+
 <h1>This is Home</h1>
+
+<div id="container">
+  {% render_bundle 'main' %}
+</div>

@@ -10051,7 +10051,7 @@ var Hello = React.createClass({
     return React.createElement(
       'h1',
       null,
-      'Hello, React!'
+      'Hello, React! Ahhhhhh!'
     );
   }
 });

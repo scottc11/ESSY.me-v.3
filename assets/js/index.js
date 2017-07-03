@@ -5,7 +5,7 @@ var Hello = React.createClass({
   render: () => {
     return (
       <h1>
-      Hello, React!
+      Hello, React! Ahhhhhh!
       </h1>
     )
   }
