@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import SearchBar from './components/project_list_item.js'
+import ProjectList from './components/project_list.js'
+import ProjectListItem from './components/project_list_item.js'
 
 // make the component
 const App = () => {
   return (
     <div>
-      <SearchBar />
+      <ProjectList />
+      <ProjectListItem />
     </div>
   );
 }

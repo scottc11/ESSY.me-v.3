@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProjectListItem = () => {
-  return <div><h1>project item</h1></div>;
+  return <div>project item</div>;
 }
 
 export default ProjectListItem;
