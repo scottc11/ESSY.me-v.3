@@ -12,7 +12,7 @@ from .serializers import projectSerializer
 def home(request):
     projects = Project.objects.order_by('pub_date')
     context = { 'projects': projects }
-    return render(request, 'home.html', context)
+    return render(request, 'base.html', context)
 
 
 # ------ API --------

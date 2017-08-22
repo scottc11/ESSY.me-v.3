@@ -13,7 +13,7 @@ module.exports = {
 
   output: {
     // where you want your compiled bundle to be stored
-    path: path.resolve('./assets/bundles/'),
+    path: path.resolve('./static/bundles/'),
     filename: 'bundle.js',
   },
 

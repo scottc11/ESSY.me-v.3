@@ -36,3 +36,9 @@ manually compile JavaScript files with
 ```
 npm pack
 ```
+
+Start a Grunt watcher to compile LESS to CSS when changes are detected
+
+```
+grunt
+```
