@@ -1,11 +1,7 @@
-.home__square {
-  background: red;
-}
-.home__circle {
-  border-radius: 25%;
-  background: blue;
-}
-.shop--cart {
-  background: yellow;
-  border-radius: 5px;
+/*
+https://coolors.co/
+COLOR BLINDNESS: PROTANOMALY
+*/
+.main {
+  background: #A8ADBB;
 }
