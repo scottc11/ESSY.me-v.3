@@ -6,7 +6,7 @@
   "scripts": {
     "pack": "./node_modules/.bin/webpack --config webpack.config.js",
     "start": "./node_modules/.bin/webpack --config webpack.config.js --watch",
-    "test": ""
+    "env": "source ../venv/bin/activate"
   },
   "author": "Scott Campbell",
   "license": "ISC",
