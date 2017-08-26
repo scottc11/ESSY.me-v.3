@@ -2,6 +2,24 @@
 https://coolors.co/
 COLOR BLINDNESS: PROTANOMALY
 */
+/* -------------------------------------------------------
+     COLOURS
+----------------------------------------------------------  */
+/* -------------------------------------------------------
+    FONTS
+----------------------------------------------------------  */
+body {
+  font-family: 'Roboto', sans-serif;
+}
 .main {
-  background: #A8ADBB;
+  font-family: 'VT323', monospace;
+  color: #EBF5EE;
+  background: #FC7753;
+  height: 100%;
+  padding: 20px;
+}
+.home__essy {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 40pt;
+  margin: 0;
 }
