@@ -1,25 +1,32 @@
-{% extends '../base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
-<hr class="custom-hr">
 
 <div class="blog__sidebar col-xs-4">
   <h1 class="blog__sidebar__header">Things about music and code.</h1>
 </div>
 
 <div class="col-xs-8">
-  <div class="blog__post">
-
+  <div class="blog__posts">
 
       <h2>latest posts</h2>
 
       {% for post in posts %}
-        <div class="">
-          DO SOMETHING
+      <div class="post-container">
+        <div class="post-thumbnail">
+          <a href="{% url 'post_detail' post.id %}"><img src="{{ post.image.url }}" alt=""></a>
         </div>
+        <a href="{% url 'post_detail' post.id %}"><h1 class="post-title">{{post.title}}</h1></a>
+        <h4 class="post-sub-title color-accent-orange">{{post.sub_title}}</h4>
+        <h6>{{post.pub_date}}</h6>
+        <div class="post-body">
+          <p>{{post.body}}</p>
+        </div>
+        <h6><a href="{% url 'post_detail' post.id %}">read more...</a></h6>
+        <hr class="black-hr">
+      </div>
       {% endfor %}
-
 
   </div>
 </div>

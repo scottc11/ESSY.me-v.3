@@ -7,3 +7,7 @@ def blog(request):
     posts = Post.objects.all()
     context = { 'posts': posts }
     return render(request, 'blog/blog.html', context)
+
+def post_detail(request, post_id):
+    post = get_object_or_404(Post, pk=post_id)
+    return render(request, 'blog/post.html', {'post': post})
