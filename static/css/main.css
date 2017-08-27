@@ -11,15 +11,42 @@ COLOR BLINDNESS: PROTANOMALY
 body {
   font-family: 'Roboto', sans-serif;
 }
-.main {
+h1 {
+  margin: 0;
+}
+.custom-hr {
+  border: 1px solid #3D464D;
+}
+.home {
   font-family: 'VT323', monospace;
   color: #EBF5EE;
   background: #FC7753;
   height: 100%;
   padding: 20px;
+  width: auto;
 }
 .home__essy {
   font-family: 'Bungee Shade', cursive;
   font-size: 40pt;
   margin: 0;
+}
+.blog {
+  height: 800px;
+  width: auto;
+  background: #FC7753;
+  color: #3D464D;
+}
+.blog__sidebar {
+  border-right: 1px solid #3D464D;
+  height: 100%;
+}
+.blog__sidebar__header {
+  color: #EBF5EE;
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+}
+.blog__post {
+  background: #FF1053;
+  height: 100%;
+  border-radius: 10px;
 }

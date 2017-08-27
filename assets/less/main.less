@@ -6,19 +6,48 @@ body {
   font-family: @roboto;
 }
 
+h1 { margin: 0; }
+
+.custom-hr {
+  border: 1px solid @mako;
+}
+
 .main {
+
+}
+
+
+.home {
   font-family: @old-code;
   color: @flash-white;
   background: @coral;
   height: 100%;
   padding: 20px;
-}
-
-
-.home {
+  width: auto;
   &__essy {
     font-family: @bungee-shade;
     font-size: 40pt;
     margin: 0;
+  }
+}
+
+.blog {
+  height: 800px;
+  width: auto;
+  background: @coral;
+  color: @mako;
+  &__sidebar {
+    border-right: 1px solid @mako;
+    height: 100%;
+    &__header {
+      color: @flash-white;
+      text-align: center;
+      font-family: @bungee-shade;
+    }
+  }
+  &__post {
+    background: @light-red;
+    height: 100%;
+    border-radius: 10px;
   }
 }
