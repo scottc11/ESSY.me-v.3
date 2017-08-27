@@ -7,6 +7,12 @@ body {
 }
 
 h1 { margin: 0; }
+a {
+  color: inherit;
+  &:hover {
+    color: @blue-jeans;
+  }
+}
 
 .custom-hr {
   border: 1px solid @mako;
@@ -39,9 +45,22 @@ h1 { margin: 0; }
     border-right: 1px solid @mako;
     height: 100%;
     &__header {
+      margin-top: 40px;
       color: @flash-white;
       text-align: center;
       font-family: @bungee-shade;
+    }
+    &__recent-posts {
+      margin-top: 40px;
+      color: @flash-white;
+      font-family: @old-code;
+      text-align: right;
+      & h3 {
+        font-size: 20pt;
+      }
+      & h5 {
+        font-size: 16pt;
+      }
     }
   }
   &__posts {
@@ -49,5 +68,28 @@ h1 { margin: 0; }
     &__post {
 
     }
+  }
+}
+
+/*--------------------------------------*/
+/*        SOCIAL ICONS                  */
+/*--------------------------------------*/
+
+.icons {
+  &__media {
+    margin-top: 20px;
+    & ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    & ul li {
+      display: inline-block;
+      font-size: 2.5em;
+      padding: 5px;
+      margin: 5px;
+    }
+    & ul li a { color: @gunmetal; }
+    & ul li a:hover { color: @flash-white; }
   }
 }

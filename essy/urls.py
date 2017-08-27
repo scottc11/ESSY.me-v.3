@@ -8,7 +8,7 @@ from home.views.blog import blog, post_detail
 urlpatterns = [
     url(r'^admin/$', admin.site.urls),
     url(r'^$', home),
-    url(r'^blog/$', blog),
+    url(r'^blog/$', blog, name='blog'),
     url(r'^posts/(?P<post_id>[0-9]+)/$', post_detail, name="post_detail"),
 
     url(r'^api/projects/', projectsList.as_view())

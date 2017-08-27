@@ -14,6 +14,12 @@ body {
 h1 {
   margin: 0;
 }
+a {
+  color: inherit;
+}
+a:hover {
+  color: #5DA7E7;
+}
 .custom-hr {
   border: 1px solid #3D464D;
 }
@@ -40,10 +46,46 @@ h1 {
   height: 100%;
 }
 .blog__sidebar__header {
+  margin-top: 40px;
   color: #EBF5EE;
   text-align: center;
   font-family: 'Bungee Shade', cursive;
 }
+.blog__sidebar__recent-posts {
+  margin-top: 40px;
+  color: #EBF5EE;
+  font-family: 'VT323', monospace;
+  text-align: right;
+}
+.blog__sidebar__recent-posts h3 {
+  font-size: 20pt;
+}
+.blog__sidebar__recent-posts h5 {
+  font-size: 16pt;
+}
 .blog__posts {
   border-radius: 10px;
+}
+/*--------------------------------------*/
+/*        SOCIAL ICONS                  */
+/*--------------------------------------*/
+.icons__media {
+  margin-top: 20px;
+}
+.icons__media ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.icons__media ul li {
+  display: inline-block;
+  font-size: 2.5em;
+  padding: 5px;
+  margin: 5px;
+}
+.icons__media ul li a {
+  color: #21252B;
+}
+.icons__media ul li a:hover {
+  color: #EBF5EE;
 }
