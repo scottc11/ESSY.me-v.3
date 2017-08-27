@@ -5,14 +5,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from .models.projects.project import Project
-from .serializers import projectSerializer
+from home.models.projects.project import Project
+from home.serializers import projectSerializer
 
 # Create your views here.
 def home(request):
     projects = Project.objects.order_by('pub_date')
     context = { 'projects': projects }
-    return render(request, 'base.html', context)
+    return render(request, 'home/home.html', context)
 
 
 # ------ API --------

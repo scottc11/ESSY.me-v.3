@@ -25,12 +25,14 @@
 
     <section class="main">
 
-      <section id="home" class="home container">
-        {% include "./home/home.html" %}
-      </section>
+      <!-- <section id="home" class="home container">
+
+      </section> -->
 
       <section id="blog" class="blog container">
-        {% include "./blog/blog.html" %}
+        {% block content %}
+
+        {% endblock %}
       </section>
 
       <div id="app">
