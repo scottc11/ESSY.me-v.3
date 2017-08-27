@@ -11,16 +11,18 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import dj_database_url
+from YamJam import yamjam
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
+CFG = yamjam()['essy']
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^ndxd3mqp*t#noj5e4%3mqv%&kqt1wc6!_z9h*)6kw$8zx+bqd'
+# SECRET_KEY = '^ndxd3mqp*t#noj5e4%3mqv%&kqt1wc6!_z9h*)6kw$8zx+bqd'
+SECRET_KEY = CFG['django_secret_key']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -136,3 +138,28 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_PRECOMPILER_ROOT = os.path.dirname(BASE_DIR + '/static/')
+
+# ----------------------------------------------------------------------------
+# GOOGLE CLOUD
+# ----------------------------------------------------------------------------
+
+GOOGLE_APPLICATION_CREDENTIALS = CFG['google_cloud_storage']
+
+PROJECT_ID = GOOGLE_APPLICATION_CREDENTIALS['project_id']
+
+# bucket ex --> "essy/media/post-date/image.png"
+CLOUD_STORAGE_BUCKET = 'essy'
+MEDIA_PREFIX = "media/"
+
+CLOUD_STORAGE_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
+    bucket_name=CLOUD_STORAGE_BUCKET
+)
+
+MEDIA_URL = "{gcs_root}{prefix}/".format(
+    gcs_root=CLOUD_STORAGE_ROOT,
+    prefix=MEDIA_PREFIX,
+)
+
+DEFAULT_FILE_STORAGE = 'google.storage.googleCloud.GoogleCloudStorage'
+
+print('-----------------------------')

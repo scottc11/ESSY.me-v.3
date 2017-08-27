@@ -1,9 +1,7 @@
+from django.conf import settings
 from django.db import models
 
-
-# Create your models here.
-
-
+# put your models here
 class Project(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100, blank=True, default='')
