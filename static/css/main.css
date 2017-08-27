@@ -31,7 +31,6 @@ h1 {
   margin: 0;
 }
 .blog {
-  height: 800px;
   width: auto;
   background: #FC7753;
   color: #3D464D;
@@ -45,8 +44,6 @@ h1 {
   text-align: center;
   font-family: 'Bungee Shade', cursive;
 }
-.blog__post {
-  background: #FF1053;
-  height: 100%;
+.blog__posts {
   border-radius: 10px;
 }
