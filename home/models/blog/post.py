@@ -6,7 +6,7 @@ from datetime import datetime
 def format_storage_path(instance, filename):
     date = datetime.now()
     date = datetime.isoformat(date).split('T')[0]
-    return '{0}/{1}'.format(date, filename)
+    return 'blog/posts/{0}/{1}'.format(date, filename)
 
 
 # Create your models here.

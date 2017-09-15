@@ -1,8 +1,24 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href={% static "css/projects.css" %}>
+{% endblock %}
 
 {% block content %}
 <section class="projects">
-  <h1 class="">projects page</h1>
+  <h1 class="">Life is Projects</h1>
+
+  {% for project in projects %}
+    <div class="projects__preview col-xs-4">
+      <div class="projects__preview--bg" style='background-image: url({{ project.thumbnail.url }})'></div>
+      <div class="projects__preview--heading">
+        <h5>{{ project.title }}</h6>
+        <h6>{{ project.sub_title }}</h6>
+        <h6>{{ project.body }}</h6>
+      </div>
+    </div>
+  {% endfor %}
 </section>
 
 
