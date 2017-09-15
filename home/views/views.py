@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-from home.models.projects.project import Project
+from home.models.project import Project
 from home.serializers import projectSerializer
 
 # Create your views here.

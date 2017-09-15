@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models.projects.project import Project
+from .models.project import Project
 from .models.blog.post import Post
 
 # Register your models here.

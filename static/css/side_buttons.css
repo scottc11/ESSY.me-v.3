@@ -15,8 +15,13 @@ COLOR BLINDNESS: PROTANOMALY
   padding: 5px 5px 5px 5px;
   margin-left: 8px;
   top: 40%;
-  left: 0px;
   text-shadow: 3px 0 10px rgba(0, 0, 0, 0.8);
+}
+.side-button--left {
+  left: 0px;
+}
+.side-button--right {
+  right: 0px;
 }
 .side-button ul {
   list-style-type: none;
