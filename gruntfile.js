@@ -9,9 +9,15 @@ module.exports = function(grunt) {
           yuicompress: true,
           optimization: 2
         },
-        files: {
-          './static/css/main.css': './assets/less/main.less'  //destination and src file
-        }
+        files: [
+          {
+            expand: true,
+            cwd: './assets/less/',
+            src: ['*.less'],
+            dest: './static/css/',
+            ext: '.css'
+          }
+        ]
       }
     },
     watch: {
