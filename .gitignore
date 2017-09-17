@@ -5,3 +5,4 @@ __pycache__/
 essy/pycache/
 home/pycache/
 *.py[cod]
+*.pyc
