@@ -6,14 +6,16 @@ from datetime import datetime
 def format_storage_path(instance, filename):
     date = datetime.now()
     date = datetime.isoformat(date).split('T')[0]
-    return 'blog/posts/{0}/{1}'.format(date, filename)
+    project_slug = instance.project.slug
+    return 'projects/{0}/posts/{1}/{2}'.format(project_slug, date, filename)
 
 
 # Create your models here.
 class Post(models.Model):
-    title = models.CharField(max_length=250)
-    sub_title = models.CharField(max_length=500)
     pub_date = models.DateTimeField()
+    title = models.CharField(max_length=250, blank=False)
+    sub_title = models.CharField(max_length=500, blank=False)
+    project = models.ForeignKey('Project', on_delete=models.SET_NULL, null=True);
     image = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage())
     thumbnail = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage())
     body = models.TextField()
