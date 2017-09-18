@@ -10,9 +10,22 @@ COLOR BLINDNESS: PROTANOMALY
 ----------------------------------------------------------  */
 body {
   font-family: 'Roboto', sans-serif;
+  background: #FC7753;
 }
 h1 {
   margin: 0;
+}
+h3 {
+  font-size: 20pt;
+}
+h4 {
+  font-size: 16pt;
+}
+h5 {
+  font-size: 14pt;
+}
+h6 {
+  font-size: 12pt;
 }
 a {
   color: inherit;
@@ -20,8 +33,23 @@ a {
 a:hover {
   color: #5DA7E7;
 }
+.color-accent--blue-jean {
+  color: #5DA7E7;
+}
+.color-accent--blue-green {
+  color: #08A4BD;
+}
+.color-accent--silver {
+  color: #A8ADBB;
+}
+.color-accent--red {
+  color: #FF1053;
+}
 .custom-hr {
   border: 1px solid #3D464D;
+}
+.base {
+  background: #FC7753;
 }
 .home {
   font-family: 'VT323', monospace;
@@ -36,6 +64,9 @@ a:hover {
   font-family: 'Bungee Shade', cursive;
   font-size: 40pt;
   margin: 0;
+}
+.home__header {
+  margin-top: 15px;
 }
 .blog {
   width: auto;

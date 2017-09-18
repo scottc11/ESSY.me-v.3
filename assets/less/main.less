@@ -3,9 +3,14 @@
 
 body {
   font-family: @roboto;
+  background: @coral;
 }
 
 h1 { margin: 0; }
+h3 { font-size: 20pt; }
+h4 { font-size: 16pt; }
+h5 { font-size: 14pt; }
+h6 { font-size: 12pt; }
 a {
   color: inherit;
   &:hover {
@@ -13,13 +18,35 @@ a {
   }
 }
 
-.custom-hr {
-  border: 1px solid @mako;
+
+// ----------------------------------------------------------------------------
+//                      GLOBAL CLASSES
+// ----------------------------------------------------------------------------
+
+.color-accent {
+  &--blue-jean { color: @blue-jeans; }
+  &--blue-green { color: @blue-green; }
+  &--silver { color: @silver; }
+  &--red { color: @light-red; }
 }
 
-.main {
 
+.custom-hr { border: 1px solid @mako; }
+
+
+
+
+
+
+// ----------------------------------------------------------------------------
+// ----------------------------------------------------------------------------
+.base {
+  background: @coral;
 }
+
+
+
+
 
 
 .home {
@@ -35,6 +62,11 @@ a {
     font-size: 40pt;
     margin: 0;
   }
+  &__header {
+
+    margin-top: 15px;
+  }
+
 }
 
 .blog {

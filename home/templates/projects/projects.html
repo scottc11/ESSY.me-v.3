@@ -10,13 +10,17 @@
   <h1 class="">Life is Projects</h1>
 
   {% for project in projects %}
-    <div class="projects__preview col-xs-4">
-      <div class="projects__preview--bg" style='background-image: url({{ project.thumbnail.url }})'></div>
-      <div class="projects__preview--heading">
-        <h5>{{ project.title }}</h6>
-        <h6>{{ project.sub_title }}</h6>
-        <h6>{{ project.body }}</h6>
-      </div>
+    <div class="col-xs-6">
+      <a href="{% url 'project' project.id %}">
+        <div class="projects__preview">
+          <div class="projects__preview--bg" style='background-image: url({{ project.thumbnail.url }})'></div>
+          <div class="projects__preview--heading">
+            <h5>{{ project.title }}</h6>
+            <h6>{{ project.sub_title }}</h6>
+            <h6>{{ project.body }}</h6>
+          </div>
+        </div>
+      </a>
     </div>
   {% endfor %}
 </section>
