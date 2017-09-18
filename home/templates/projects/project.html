@@ -11,7 +11,7 @@
 {% block content %}
 <section class="margin-top-20">
 
-  <div class="project__sidebar col-xs-3">
+  <div class="sidebar__container col-xs-3">
     {% include './sidebar.html' %}
   </div>
 
@@ -59,13 +59,15 @@
     <!-- ~~~~~~~~~~~~~~~~~~~ -->
 
     <div class="row">
-      <div class="project__content col-xs-12">
+      <div class="project__body--container col-xs-12">
 
-        <p>{{ project.body }}</p>
+        <div class="project__body">
+          <p>{{ project.body }}</p>
 
-        <h5>Check out the code --> <a href="{{ project.github }}" target="_blank">GitHub</a></h5>
+          <h5>Check out the code --> <a href="{{ project.github }}" target="_blank">GitHub</a></h5>
 
-        <hr class="black-hr">
+          <hr class="black-hr">
+        </div>
       </div>
 
 

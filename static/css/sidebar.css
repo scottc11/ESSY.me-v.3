@@ -16,6 +16,10 @@ COLOR BLINDNESS: PROTANOMALY
 /*--------------------------------------*/
 .sidebar {
   padding: 10px;
+  background: #383737;
+}
+.sidebar__container {
+  padding: 0;
 }
 .sidebar__heading {
   margin-top: 40px;

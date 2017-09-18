@@ -71,6 +71,14 @@ COLOR BLINDNESS: PROTANOMALY
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.project__body {
+  padding: 15px;
+}
+.project__body--container {
+  padding: 0;
+  background: #EBF5EE;
+  color: #1E1A17;
+}
 .project__body p img {
   text-align: center;
   margin: auto;

@@ -3,6 +3,7 @@
 .projects {
   color: @flash-white;
   height: 100%;
+
   &__preview {
     box-sizing: border-box;
     height: 300px;
@@ -14,9 +15,9 @@
     text-align: left;
     overflow: hidden;
     cursor: pointer;
-    &--tinted {
-      background-color: rgba(0, 0, 0, 0.83);
-    }
+
+    &--tinted { background-color: rgba(0, 0, 0, 0.83); }
+
     &--heading {
       display: inline-block;
       position: absolute;
@@ -24,6 +25,7 @@
       margin: 20px;
       z-index: 2;
     }
+
     &--bg {
       background-position: center;
       background-repeat: no-repeat;
@@ -65,10 +67,19 @@
     margin-bottom: 10px;
   }
 
-  &__body p img {
-    text-align: center;
-    margin: auto;
-    border-radius: 5px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+  &__body {
+    padding: 15px;
+    &--container {
+      padding: 0;
+      background: @flash-white;
+      color: @black;
+    }
+
+    & p img {
+      text-align: center;
+      margin: auto;
+      border-radius: 5px;
+      box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    }
   }
 }
