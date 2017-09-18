@@ -23,6 +23,11 @@ COLOR BLINDNESS: PROTANOMALY
   text-align: center;
   font-family: 'Bungee Shade', cursive;
 }
+.sidebar__sub-header {
+  text-align: right;
+  font-family: 'VT323', monospace;
+  color: #EBF5EE;
+}
 .sidebar__posts {
   font-family: 'VT323', monospace;
   text-align: right;
@@ -33,6 +38,15 @@ COLOR BLINDNESS: PROTANOMALY
   padding-bottom: 5px;
   padding-right: 10px;
   color: black;
+}
+.sidebar__tech ul {
+  list-style: none;
+  padding: 0;
+  text-align: right;
+}
+.sidebar__tech ul li {
+  font-family: 'Roboto', sans-serif;
+  color: #87CDFF;
 }
 .sidebar__soc-icons {
   margin-top: 20px;

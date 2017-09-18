@@ -13,7 +13,6 @@ COLOR BLINDNESS: PROTANOMALY
 ----------------------------------------------------------  */
 body {
   font-family: 'Roboto', sans-serif;
-  background: #FC7753;
 }
 h1 {
   margin: 0;
@@ -55,12 +54,12 @@ a:hover {
   text-align: center;
 }
 .base {
-  background: #FC7753;
+  background: #FE5F55;
 }
 .home {
   font-family: 'VT323', monospace;
   color: #EBF5EE;
-  background: #FC7753;
+  background: #383737;
   height: 100%;
   padding: 20px;
   width: auto;
