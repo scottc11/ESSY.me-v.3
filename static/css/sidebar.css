@@ -1,0 +1,56 @@
+/*
+https://coolors.co/
+COLOR BLINDNESS: PROTANOMALY
+*/
+/* -------------------------------------------------------
+     COLOURS
+----------------------------------------------------------  */
+/* -------------------------------------------------------
+    FONTS
+----------------------------------------------------------  */
+/* -------------------------------------------------------
+    SITE WIDE STYLES
+----------------------------------------------------------  */
+/*--------------------------------------*/
+/*        SIDEBAR HEADER                */
+/*--------------------------------------*/
+.sidebar {
+  padding: 10px;
+}
+.sidebar__heading {
+  margin-top: 40px;
+  color: #EBF5EE;
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+}
+.sidebar__posts {
+  font-family: 'VT323', monospace;
+  text-align: right;
+  padding: 10px;
+}
+.sidebar__posts--title {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  color: black;
+}
+.sidebar__soc-icons {
+  margin-top: 20px;
+}
+.sidebar__soc-icons ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.sidebar__soc-icons ul li {
+  display: inline-block;
+  font-size: 16pt;
+  padding: 5px;
+  margin: 5px;
+}
+.sidebar__soc-icons ul li a {
+  color: #EBF5EE;
+}
+.sidebar__soc-icons ul li a:hover {
+  color: #5DA7E7;
+}

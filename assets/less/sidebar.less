@@ -1,0 +1,49 @@
+@import 'variables';
+
+/*--------------------------------------*/
+/*        SIDEBAR HEADER                */
+/*--------------------------------------*/
+
+.sidebar {
+  padding: 10px;
+
+  &__heading {
+    margin-top: 40px;
+    color: @flash-white;
+    text-align: center;
+    font-family: @bungee-shade;
+  }
+
+  &__posts {
+    font-family: @old-code;
+    text-align: right;
+    padding: 10px;
+    &--title {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      color: black;
+    }
+  }
+
+  // Social Media Icons
+  &__soc-icons {
+    margin-top: 20px;
+
+    & ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    & ul li {
+      display: inline-block;
+      font-size: @medium;
+      padding: 5px;
+      margin: 5px;
+    }
+    & ul li a { color: @body-color; }
+    & ul li a:hover { color: @blue-jeans; }
+  }
+
+}

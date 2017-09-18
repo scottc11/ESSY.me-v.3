@@ -8,6 +8,9 @@ COLOR BLINDNESS: PROTANOMALY
 /* -------------------------------------------------------
     FONTS
 ----------------------------------------------------------  */
+/* -------------------------------------------------------
+    SITE WIDE STYLES
+----------------------------------------------------------  */
 body {
   font-family: 'Roboto', sans-serif;
   background: #FC7753;
@@ -47,6 +50,9 @@ a:hover {
 }
 .custom-hr {
   border: 1px solid #3D464D;
+}
+.text-center {
+  text-align: center;
 }
 .base {
   background: #FC7753;
