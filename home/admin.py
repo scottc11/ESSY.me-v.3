@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models.project import Project
-from .models.blog.post import Post
+from .models.post import Post
 
 
 class ProjectAdmin(admin.ModelAdmin):

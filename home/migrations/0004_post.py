@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 from django.db import migrations, models
 import essy.storage
-import home.models.blog.post
+import home.models.post
 
 
 class Migration(migrations.Migration):
@@ -21,8 +21,8 @@ class Migration(migrations.Migration):
                 ('title', models.CharField(max_length=250)),
                 ('sub_title', models.CharField(max_length=500)),
                 ('pub_date', models.DateTimeField()),
-                ('image', models.ImageField(storage=essy.storage.GoogleCloudStorage(), upload_to=home.models.blog.post.format_storage_path)),
-                ('thumbnail', models.ImageField(storage=essy.storage.GoogleCloudStorage(), upload_to=home.models.blog.post.format_storage_path)),
+                ('image', models.ImageField(storage=essy.storage.GoogleCloudStorage(), upload_to=home.models.post.format_storage_path)),
+                ('thumbnail', models.ImageField(storage=essy.storage.GoogleCloudStorage(), upload_to=home.models.post.format_storage_path)),
                 ('body', models.TextField()),
                 ('github', models.URLField(default='https://github.com/scottc11', max_length=250)),
             ],

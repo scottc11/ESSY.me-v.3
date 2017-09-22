@@ -15,7 +15,7 @@ COLOR BLINDNESS: PROTANOMALY
 /*        SIDEBAR HEADER                */
 /*--------------------------------------*/
 .sidebar {
-  padding: 10px;
+  padding: 20px;
   background: #383737;
 }
 .sidebar__container {
@@ -32,15 +32,17 @@ COLOR BLINDNESS: PROTANOMALY
   font-family: 'VT323', monospace;
   color: #EBF5EE;
 }
+.sidebar__date {
+  color: #F9C80E;
+  font-size: 13pt;
+  text-align: right;
+}
 .sidebar__posts {
   font-family: 'VT323', monospace;
   text-align: right;
-  padding: 10px;
 }
 .sidebar__posts--title {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 10px;
+  margin: 3px 0;
   color: black;
 }
 .sidebar__tech ul {

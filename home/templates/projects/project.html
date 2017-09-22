@@ -15,68 +15,38 @@
     {% include './sidebar.html' %}
   </div>
 
-  <article class="col-xs-9">
+  <article class="project__container col-xs-9">
 
     <!-- project thumbnail -->
-      <a href="{{ project.thumbnail.url }}" title="{{ project.thumbnail.title }}">
-        <div class="project__thumbnail" style="background-image: url( {{ project.thumbnail.url }} );"></div>
-      </a>
+    <div class="project__thumbnail">
+      <img src="{{ project.thumbnail.url }}" alt="">
+    </div>
     <!-- /project thumbnail -->
 
+    <div class="project__header">
+      <h1>
+        {{ project.title }}
+      </h1>
 
-    <!-- post header -->
-    <div class="row">
-
-      <div class="col-xs-12">
-        <div class="project__header">
-          <h1>
-            {{ project.title }}
-          </h1>
-
-          <h4>{{ project.sub_title }}</h4>
-
-
-          <span class="date">
-            <time>
-              {{ project.pub_date }}
-            </time>
-          </span>
-          <span class="author">Author?</span>
-          <span class="comments">comments</span>
-
-        </div>
-
-      </div>
-      <!-- /post title -->
-
-      <hr class="black-hr">
+      <h4>{{ project.sub_title }}</h4>
     </div>
 
-
-
-    <!-- ~~~~~~~~~~~~~~~~~~~ -->
-    <!-- 		THE CONTENT 	   -->
-    <!-- ~~~~~~~~~~~~~~~~~~~ -->
-
-    <div class="row">
-      <div class="project__body--container col-xs-12">
-
-        <div class="project__body">
-          <p>{{ project.body }}</p>
-
-          <h5>Check out the code --> <a href="{{ project.github }}" target="_blank">GitHub</a></h5>
-
-          <hr class="black-hr">
-        </div>
-      </div>
-
-
-      <!-- 		COMMENTS 	     -->
-      <div class="col-xs-12">
-        <p>comments</p>
-      </div>
+    <div class="project__body">
+      <p>{{ project.idea }}</p>
+      <p>{{ project.body }}</p>
+      <p>{{ project.end_goal }}</p>
     </div>
 
+    {% if posts %}
+      {% for post in posts %}
+        <div class="project__post">
+          <div class="project__post--bg" style='background-image: url({{ post.thumbnail.url }})'></div>
+          <div class="project__post--header">
+            <h4>{{ post.title }}</h4>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
   </article>
 </section>
 {% endblock %}

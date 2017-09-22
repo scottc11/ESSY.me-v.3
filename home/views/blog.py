@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import admin
-from home.models.blog.post import Post
+from home.models.post import Post
 
 def blog(request):
     posts = Post.objects.all()

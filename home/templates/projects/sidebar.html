@@ -9,6 +9,12 @@
 
   <hr class="black-hr">
 
+  <div class="sidebar__date">
+    <time>
+      {{ project.pub_date|date:"M d Y" }}
+    </time>
+  </div>
+
   <div class="sidebar__posts">
     <h4 class="sidebar__sub-header">recent posts</h4>
     <a href=""><h5 class="sidebar__posts--title">examole 1</h5></a>

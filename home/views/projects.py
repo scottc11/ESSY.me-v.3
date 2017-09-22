@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import admin
 from home.models.project import Project
+from home.models.post import Post
 
 def projects(request):
     projects = Project.objects.order_by('pub_date')
@@ -8,4 +9,5 @@ def projects(request):
 
 def project(request, num):
     project = get_object_or_404(Project, pk=num)
-    return render(request, 'projects/project.html', {'project': project})
+    posts = Post.objects.filter(project=project)
+    return render(request, 'projects/project.html', { 'project': project, 'posts': posts })
