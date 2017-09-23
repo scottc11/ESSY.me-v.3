@@ -18,8 +18,8 @@
   <article class="project__container col-xs-9">
 
     <!-- project thumbnail -->
-    <div class="project__thumbnail">
-      <img src="{{ project.thumbnail.url }}" alt="">
+    <div>
+      <div class="project__thumbnail" style="background-image: url({{ project.thumbnail.url }})"></div>
     </div>
     <!-- /project thumbnail -->
 
@@ -39,12 +39,14 @@
 
     {% if posts %}
       {% for post in posts %}
+      <a href="{% url 'post' prj=project.id post=post.id %}">
         <div class="project__post">
           <div class="project__post--bg" style='background-image: url({{ post.thumbnail.url }})'></div>
           <div class="project__post--header">
             <h4>{{ post.title }}</h4>
           </div>
         </div>
+      </a>
       {% endfor %}
     {% endif %}
   </article>

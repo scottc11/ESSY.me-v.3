@@ -11,3 +11,7 @@ def project(request, num):
     project = get_object_or_404(Project, pk=num)
     posts = Post.objects.filter(project=project)
     return render(request, 'projects/project.html', { 'project': project, 'posts': posts })
+
+def post(request, prj, post):
+    post = Post.objects.get(id=post, project=prj)
+    return render(request, 'projects/post.html', { 'post': post })

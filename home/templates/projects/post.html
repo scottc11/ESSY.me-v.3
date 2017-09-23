@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static "css/post.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/sidebar.css" %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="margin-top-20">
+
+  <div class="sidebar__container col-xs-3">
+    {% include './sidebar.html' %}
+  </div>
+
+  <article class="post col-xs-9">
+
+    <!-- THUMBNAIL -->
+    <div>
+      <div class="post__thumbnail" style="background-image: url({{ post.thumbnail.url }})"></div>
+    </div>
+
+    <!-- HEADER -->
+    <div class="post__header">
+      <h1>{{ post.title }}</h1>
+      <h3>{{ post.sub_title }}</h3>
+    </div>
+
+    <!-- SOUNDCLOUD EMBED -->
+    {% if post.soundcloud %}
+    <div class="soundcloud">
+      {{ post.soundcloud|safe }}
+    </div>
+    {% endif %}
+
+  </article>
+
+</section>
+
+{% endblock %}
