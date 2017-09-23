@@ -3,7 +3,8 @@ from django.conf import settings
 from django.db import models
 from essy.storage import GoogleCloudStorage
 from datetime import datetime
-
+from home.models.technology import Technology
+from home.models.social_media import SocialMediaAccount
 
 def format_storage_path(instance, filename):
     project_name = instance.slug
@@ -20,6 +21,9 @@ class Project(models.Model):
     end_goal = models.TextField(blank=True, default='')
     thumbnail = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage(), default='')
     featured = models.BooleanField(default=False)
+    technologies = models.ManyToManyField(Technology)
+    media_accounts = models.ManyToManyField(SocialMediaAccount)
+
 
     github = models.URLField(max_length=250, default='https://github.com/scottc11')
 

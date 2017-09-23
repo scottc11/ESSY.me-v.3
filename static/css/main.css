@@ -55,6 +55,7 @@ a:hover {
 }
 .base {
   background: #99c1a5;
+  height: 100%;
 }
 .home {
   font-family: 'VT323', monospace;
