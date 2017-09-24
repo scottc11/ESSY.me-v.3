@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href={% static "css/home.css" %}>
+{% endblock %}
 
 {% block content %}
 <section id="home" class="home col-xs-12">

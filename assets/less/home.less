@@ -1,0 +1,67 @@
+@import 'variables';
+
+.home {
+  font-family: @old-code;
+  color: @flash-white;
+  background: @onyx;
+  height: 100%;
+  padding: 20px;
+  width: auto;
+  &__essy {
+    color: @flash-white;
+    font-family: @bungee-shade;
+    font-size: 40pt;
+    margin: 0;
+  }
+  &__header {
+
+    margin-top: 15px;
+  }
+
+}
+
+
+.projects {
+  color: @flash-white;
+  height: 100%;
+
+  &__preview {
+    box-sizing: border-box;
+    height: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    position: relative;
+    box-shadow: 0 0 50px @box-shadow;
+    text-align: left;
+    overflow: hidden;
+    cursor: pointer;
+
+    &--tinted { background-color: @box-shadow; }
+
+    &--heading {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      margin: 20px;
+      z-index: 2;
+    }
+
+    &--bg {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      z-index: 1;  /*so the background stays behind headers*/
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      &:hover  {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

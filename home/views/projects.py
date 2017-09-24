@@ -13,5 +13,6 @@ def project(request, num):
     return render(request, 'projects/project.html', { 'project': project, 'posts': posts })
 
 def post(request, prj, post):
+    project = get_object_or_404(Project, pk=prj)
     post = Post.objects.get(id=post, project=prj)
-    return render(request, 'projects/post.html', { 'post': post })
+    return render(request, 'projects/post.html', { 'project': project, 'post': post })

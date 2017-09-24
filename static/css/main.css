@@ -54,55 +54,8 @@ a:hover {
   text-align: center;
 }
 .base {
-  background: #99c1a5;
+  background: #FE5F55;
   height: 100%;
-}
-.home {
-  font-family: 'VT323', monospace;
-  color: #EBF5EE;
-  background: #383737;
-  height: 100%;
-  padding: 20px;
-  width: auto;
-}
-.home__essy {
-  color: #EBF5EE;
-  font-family: 'Bungee Shade', cursive;
-  font-size: 40pt;
-  margin: 0;
-}
-.home__header {
-  margin-top: 15px;
-}
-.blog {
-  width: auto;
-  background: #FC7753;
-  color: #3D464D;
-}
-.blog__sidebar {
-  border-right: 1px solid #3D464D;
-  height: 100%;
-}
-.blog__sidebar__header {
-  margin-top: 40px;
-  color: #EBF5EE;
-  text-align: center;
-  font-family: 'Bungee Shade', cursive;
-}
-.blog__sidebar__recent-posts {
-  margin-top: 40px;
-  color: #EBF5EE;
-  font-family: 'VT323', monospace;
-  text-align: right;
-}
-.blog__sidebar__recent-posts h3 {
-  font-size: 20pt;
-}
-.blog__sidebar__recent-posts h5 {
-  font-size: 16pt;
-}
-.blog__posts {
-  border-radius: 10px;
 }
 /*--------------------------------------*/
 /*        SOCIAL ICONS                  */

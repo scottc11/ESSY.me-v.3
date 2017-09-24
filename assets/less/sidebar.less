@@ -1,21 +1,19 @@
 @import 'variables';
 
-/*--------------------------------------*/
-/*        SIDEBAR HEADER                */
-/*--------------------------------------*/
-
 .sidebar {
   padding: 20px;
-  background: @sunset-orange;
+  background: @onyx;
+  height: 100%;
 
   &__container {
     padding: 0;
+    height: 100%;
   }
 
   &__heading {
-    margin-top: 40px;
+    font-size: 40pt;
     color: @flash-white;
-    text-align: center;
+    text-align: left;
     font-family: @bungee-shade;
   }
 
@@ -25,19 +23,37 @@
     color: @flash-white;
   }
 
-  &__date {
-    color: @mikado;
-    font-size: @small;
-    text-align: right;
+  &__summary {
+    color: @flash-white;
+
+    & h4 { font-family: @bungee-hairline; text-decoration: underline; }
+    & h5 { font-family: @bungee-hairline; color: @blue-jeans; }
+    & p {
+      color: @white;
+      font-family: @source-sans-pro;
+      // text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+      margin-top: 10px;
+    }
+    &--date {
+      font-family: @bungee-hairline;
+      color: @mikado;
+      font-size: @xs-small;
+      text-align: right;
+    }
   }
 
   &__posts {
     font-family: @old-code;
     text-align: right;
-
-    &--title {
-      margin: 3px 0;
-      color: black;
+    & ul {
+      list-style: none;
+      padding: 0;
+      text-align: right;
+      & li {
+        font-size: @medium;
+        margin: 3px 0;
+        color: black;
+      }
     }
   }
 
@@ -47,6 +63,7 @@
       padding: 0;
       text-align: right;
       & li {
+        font-size: @xs-small;
         font-family: @roboto;
         color: @baby-blue;
       }
@@ -60,17 +77,16 @@
     & ul {
       list-style: none;
       padding: 0;
-      text-align: center;
+      text-align: right;
+      & li {
+        display: inline-block;
+        font-size: @xs-large;
+        padding: 5px;
+        margin: 5px;
+        & a { color: @body-color; }
+        & a:hover { color: @blue-jeans; }
+      }
     }
-
-    & ul li {
-      display: inline-block;
-      font-size: @medium;
-      padding: 5px;
-      margin: 5px;
-    }
-    & ul li a { color: @body-color; }
-    & ul li a:hover { color: @blue-jeans; }
   }
 
 }

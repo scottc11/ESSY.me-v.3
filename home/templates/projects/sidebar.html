@@ -4,56 +4,54 @@
 <div class="sidebar">
 
   <div class="text-center">
-    <h1 class="sidebar__heading"><a href="{% url 'home' %}">FMTC</a></h1>
+    <h1 class="sidebar__heading"><a href="{% url 'home' %}">ESSY</a></h1>
   </div>
 
   <hr class="black-hr">
 
-  <div class="sidebar__date">
-    <time>
-      {{ project.pub_date|date:"M d Y" }}
-    </time>
+  <div class="sidebar__summary">
+    <h4>Project</h4>
+    <h5>{{ project.title }}</h5>
+    <h5>{{ project.sub_title }}</h5>
+    <time class="sidebar__summary--date">{{ project.pub_date|date:"M d Y" }}</time>
+
+    <p>{{ project.idea }}</p>
+
   </div>
+
+  <hr class="black-hr">
 
   <div class="sidebar__posts">
     <h4 class="sidebar__sub-header">recent posts</h4>
-    <a href=""><h5 class="sidebar__posts--title">examole 1</h5></a>
-    <a href=""><h5 class="sidebar__posts--title">examole 2</h5></a>
-    <a href=""><h5 class="sidebar__posts--title">examole 3</h5></a>
+    <ul>
+      {% for post in project.post_set.all %}
+      <li>
+        <a href="{% url 'post' prj=project.id post=post.id %}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 
   <div class="sidebar__tech">
     <h4 class="sidebar__sub-header">technologies</h4>
     <ul>
-      <li>Node.js</li>
-      <li>Express.js</li>
-      <li>AngularJS</li>
-      <li>MongoDB</li>
-      <li>Mongoose</li>
-      <li>OAuth</li>
-      <li>HTML/CSS</li>
-      <li>GIT</li>
+      {% for tech in project.technologies.all %}
+      <li class="button-link">
+        <a href="{{ tech.link }}" target="_blank">{{ tech.name }}</a>
+      </li>
+      <br>
+      {% endfor %}
     </ul>
   </div>
 
   <div class="sidebar__soc-icons">
     <h4 class="sidebar__sub-header">project links</h4>
     <ul>
-      <li id="email">
-        <a href=""><span class="fa fa-envelope"></span></a>
+      {% for account in project.media_accounts.all %}
+      <li>
+        <a href="{{ account.link }}" target="_blank" title={{ account.name }}><span class="fa {{ account.icon_class }}"></span></a>
       </li>
-      <li id="youtube">
-        <a href="https://www.youtube.com/channel/UCYqJ-EtqO6gVCPh4aDpckRA" target="_blank"><span class="fa fa-youtube"></span></a>
-      </li>
-      <li id="github">
-        <a href="https://github.com/scottc11" target="_blank"><span class="fa fa-github"></span></a>
-      </li>
-      <li id="twitter">
-        <a href="https://twitter.com/Scott_Camp" target="_blank"><span class="fa fa-twitter"></span></a>
-      </li>
-      <li id="soundcloud">
-        <a href="https://soundcloud.com/scottcamp" target="_blank"><span class="fa fa-soundcloud"></span></a>
-      </li>
+      {% endfor %}
     </ul>
   </div>
 

@@ -3,7 +3,7 @@
 
 
 {% block styles %}
-  <link rel="stylesheet" type="text/css" href="{% static "css/projects.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/project.css" %}">
   <link rel="stylesheet" type="text/css" href="{% static "css/sidebar.css" %}">
 {% endblock %}
 
@@ -18,37 +18,32 @@
   <article class="project__container col-xs-9">
 
     <!-- project thumbnail -->
-    <div>
-      <div class="project__thumbnail" style="background-image: url({{ project.thumbnail.url }})"></div>
+    <div class="project__header">
+      <div class="project__header--bg" style="background-image: url({{ project.thumbnail.url }})"></div>
+      <div class="project__header--heading">
+        <h1>{{ project.title }}</h1>
+        <br>
+        <h4>{{ project.sub_title }}</h4>
+        <br>
+        <h5>idea: </h5>
+      </div>
     </div>
     <!-- /project thumbnail -->
 
-    <div class="project__header">
-      <h1>
-        {{ project.title }}
-      </h1>
-
-      <h4>{{ project.sub_title }}</h4>
-    </div>
-
     <div class="project__body">
-      <p>{{ project.idea }}</p>
       <p>{{ project.body }}</p>
-      <p>{{ project.end_goal }}</p>
     </div>
 
-    {% if posts %}
-      {% for post in posts %}
-      <a href="{% url 'post' prj=project.id post=post.id %}">
-        <div class="project__post">
-          <div class="project__post--bg" style='background-image: url({{ post.thumbnail.url }})'></div>
-          <div class="project__post--header">
-            <h4>{{ post.title }}</h4>
-          </div>
+    {% for post in project.post_set.all %}
+    <a href="{% url 'post' prj=project.id post=post.id %}">
+      <div class="project__post">
+        <div class="project__post--bg" style='background-image: url({{ post.thumbnail.url }})'></div>
+        <div class="project__post--header">
+          <h4>{{ post.title }}</h4>
         </div>
-      </a>
-      {% endfor %}
-    {% endif %}
+      </div>
+    </a>
+    {% endfor %}
   </article>
 </section>
 {% endblock %}
