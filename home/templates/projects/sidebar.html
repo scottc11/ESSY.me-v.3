@@ -11,7 +11,7 @@
 
   <div class="sidebar__summary">
     <h4>Project</h4>
-    <h5>{{ project.title }}</h5>
+    <h5><a href="{% url 'project' num=project.id %}">{{ project.title }}</a></h5>
     <h5>{{ project.sub_title }}</h5>
     <time class="sidebar__summary--date">{{ project.pub_date|date:"M d Y" }}</time>
 
@@ -36,9 +36,11 @@
     <h4 class="sidebar__sub-header">technologies</h4>
     <ul>
       {% for tech in project.technologies.all %}
-      <li class="button-link">
-        <a href="{{ tech.link }}" target="_blank">{{ tech.name }}</a>
-      </li>
+      <a href="{{ tech.link }}" target="_blank">
+        <li class="button-link">
+        {{ tech.name }}
+        </li>
+      </a>
       <br>
       {% endfor %}
     </ul>

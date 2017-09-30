@@ -79,12 +79,27 @@ COLOR BLINDNESS: PROTANOMALY
   cursor: pointer;
 }
 .project__post--header {
-  color: #EBF5EE;
+  color: #3D464D;
   display: inline-block;
   position: absolute;
   bottom: 0;
   margin: 20px;
   z-index: 2;
+  background-color: #5DA7E7;
+  padding: 15px;
+}
+.project__post--header h4,
+.project__post--header h5,
+.project__post--header h6 {
+  display: inline-block;
+  font-family: 'Bungee Hairline', cursive;
+  margin: 0;
+}
+.project__post--header h4 {
+  font-size: 13pt;
+}
+.project__post--header h5 {
+  font-size: 11pt;
 }
 .project__post--bg {
   background-position: center;

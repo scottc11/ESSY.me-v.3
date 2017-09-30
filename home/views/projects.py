@@ -8,9 +8,9 @@ def projects(request):
     return render(request, 'projects/projects.html', {'projects': projects})
 
 def project(request, num):
+    print (request.META['HTTP_USER_AGENT'])
     project = get_object_or_404(Project, pk=num)
-    posts = Post.objects.filter(project=project)
-    return render(request, 'projects/project.html', { 'project': project, 'posts': posts })
+    return render(request, 'projects/project.html', { 'project': project })
 
 def post(request, prj, post):
     project = get_object_or_404(Project, pk=prj)

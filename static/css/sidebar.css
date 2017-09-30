@@ -38,6 +38,9 @@ COLOR BLINDNESS: PROTANOMALY
   font-family: 'Bungee Hairline', cursive;
   text-decoration: underline;
 }
+.sidebar__summary h5:first-child {
+  margin-top: 20px;
+}
 .sidebar__summary h5 {
   font-family: 'Bungee Hairline', cursive;
   color: #5DA7E7;
@@ -71,6 +74,9 @@ COLOR BLINDNESS: PROTANOMALY
   list-style: none;
   padding: 0;
   text-align: right;
+}
+.sidebar__tech ul a:hover {
+  text-decoration: none;
 }
 .sidebar__tech ul li {
   font-size: 11pt;

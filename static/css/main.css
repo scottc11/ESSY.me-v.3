@@ -47,6 +47,18 @@ a:hover {
 .color-accent--red {
   color: #FF1053;
 }
+.color-accent--mikado {
+  color: #F9C80E;
+}
+.color-accent--gold {
+  color: #CCA43B;
+}
+.color-accent--turquoise {
+  color: #49DEFf;
+}
+.color-accent--sunset-orange {
+  color: #FE5F55;
+}
 .custom-hr {
   border: 1px solid #3D464D;
 }

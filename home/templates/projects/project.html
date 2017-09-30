@@ -24,8 +24,6 @@
         <h1>{{ project.title }}</h1>
         <br>
         <h4>{{ project.sub_title }}</h4>
-        <br>
-        <h5>idea: </h5>
       </div>
     </div>
     <!-- /project thumbnail -->
@@ -40,6 +38,10 @@
         <div class="project__post--bg" style='background-image: url({{ post.thumbnail.url }})'></div>
         <div class="project__post--header">
           <h4>{{ post.title }}</h4>
+          <br>
+          <h5>{{ post.sub_title }}</h5>
+          <br>
+          <h5>{{ post.pub_date }}</h5>
         </div>
       </div>
     </a>

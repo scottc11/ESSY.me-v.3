@@ -68,12 +68,22 @@
     overflow: hidden;
     cursor: pointer;
     &--header {
-      color: @flash-white;
+      color: @mako;
       display: inline-block;
       position: absolute;
       bottom: 0;
       margin: 20px;
       z-index: 2;
+      background-color: @blue-jeans;
+      padding: 15px;
+
+      & h4, h5, h6 {
+        display: inline-block;
+        font-family: @bungee-hairline;
+        margin: 0;
+      }
+      & h4 { font-size: @small; }
+      & h5 { font-size: @xs-small; }
     }
     &--bg {
       background-position: center;
