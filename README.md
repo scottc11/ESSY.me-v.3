@@ -58,10 +58,10 @@ gcloud config set project <PROJECT_ID>
 gcloud sql instances describe <INSTANCE_NAME>
 ```
 
-Initialize gcloud Cloud SQL instance
+Initialize gcloud Cloud SQL instance (hint: you will need the 'cloud_sql_proxy' exec file)
 
 ```
-./cloud_sql_proxy -instances="./cloud_sql_proxy -instances="essy-178102:us-central1:test-1"=tcp:5432"=tcp:5432
+./cloud_sql_proxy -instances="essy-178102:us-central1:essy-db"=tcp:5432
 ```
 
 This step establishes a connection from your local computer to your Cloud SQL instance for local testing purposes.

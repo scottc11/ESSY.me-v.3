@@ -6,3 +6,4 @@ essy/pycache/
 home/pycache/
 *.py[cod]
 *.pyc
+cloud_sql_proxy
