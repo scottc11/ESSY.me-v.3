@@ -12,22 +12,12 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 import dj_database_url
-from YamJam import yamjam
-
-
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-# CFG = yamjam()['essy']
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^ndxd3mqp*t#noj5e4%3mqv%&kqt1wc6!_z9h*)6kw$8zx+bqd'
-# SECRET_KEY = CFG['django_secret_key']
-
-
+print(BASE_DIR)
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # usually an empty array - set to '*' for App Engine
 ALLOWED_HOSTS = ['*']
@@ -92,26 +82,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'essy.wsgi.application'
 
 
-DATABASES = {
-    'test': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    },
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'essydb',
-        'USER': 'scottc11',
-        'PASSWORD': 'h677^jdjks091122384klddsoi%remnc#hj',
-        'PORT': '5432',
-    }
-}
-
-DATABASES['default']['HOST'] = '/cloudsql/essy-178102:us-central1:essy-db'
-if os.getenv('GAE_INSTANCE'):
-    pass
-else:
-    DATABASES['default']['HOST'] = '127.0.0.1'
-
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
 
@@ -145,24 +115,19 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
-# STATIC_URL = '/static/'
-STATIC_URL = 'http://storage.googleapis.com/{}/static/'.format(os.environ['CLOUD_STORAGE_BUCKET'])
+# ----------------------------------------------------------------------------
 
 STATIC_ROOT = 'static/'
 STATIC_PRECOMPILER_ROOT = os.path.dirname(BASE_DIR + '/static/')
 
-# ----------------------------------------------------------------------------
+
+
 # GOOGLE CLOUD
 # ----------------------------------------------------------------------------
 
-# GOOGLE_APPLICATION_CREDENTIALS = CFG['google_cloud_storage']
-
-# PROJECT_ID = GOOGLE_APPLICATION_CREDENTIALS['project_id']
-
-# bucket ex --> "essy/media/post-date/image.png"
 PROJECT_ID = 'essy-178102'
 CLOUD_STORAGE_BUCKET = 'essy'
 MEDIA_PREFIX = "media/"
@@ -177,5 +142,7 @@ MEDIA_URL = "{gcs_root}{prefix}/".format(
 )
 
 DEFAULT_FILE_STORAGE = 'google.storage.googleCloud.GoogleCloudStorage'
+
+
 
 print('-----------------------------')

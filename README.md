@@ -68,7 +68,24 @@ This step establishes a connection from your local computer to your Cloud SQL in
 
 ----------------------------------------------------------------------------
 Write google app default credentials
-
 ```
 gcloud auth application-default
+```
+
+Copy all local static folder cloud storage static folder
+```
+gsutil rsync -R static/ gs://essy/static
+```
+
+
+---- DEPLOY APP ----
+```
+gcloud app deploy
+```
+
+DEBUG APP
+```
+gcloud app --project [PROJECT-ID] instances enable-debug
+gcloud app --project [PROJECT-ID] instances disable-debug
+
 ```
