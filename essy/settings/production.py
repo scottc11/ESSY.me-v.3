@@ -3,12 +3,14 @@ import os
 import dj_database_url
 from .base import *
 
+print('settings: production ')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
-DEBUG = False
+DEBUG = True
 
+ALLOWED_HOSTS = ['*']
 
 DATABASES = {
     'default': {
@@ -28,4 +30,4 @@ else:
     DATABASES['default']['HOST'] = '127.0.0.1'
 
 
-STATIC_URL = 'http://storage.googleapis.com/{}/static/'.format(os.environ['CLOUD_STORAGE_BUCKET'])
+STATIC_URL = 'https://storage.googleapis.com/{}/static/'.format(os.environ['CLOUD_STORAGE_BUCKET'])

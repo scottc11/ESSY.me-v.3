@@ -4,6 +4,7 @@ import dj_database_url
 from .base import *
 from YamJam import yamjam
 
+print('settings: development ')
 
 CFG = yamjam()['essy']
 
@@ -13,11 +14,11 @@ DEBUG = True
 
 
 DATABASES = {
-    'test': {
+    'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'default': {
+    'test': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': CFG['cloud_sql']['database_name'],
         'USER': CFG['cloud_sql']['user']['name'],

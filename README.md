@@ -89,3 +89,9 @@ gcloud app --project [PROJECT-ID] instances enable-debug
 gcloud app --project [PROJECT-ID] instances disable-debug
 
 ```
+
+Django SuperUser
+```
+username: scottcampbell
+password: developer password
+```
