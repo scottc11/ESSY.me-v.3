@@ -49,8 +49,8 @@ MIDDLEWARE = [
 
 STATICFILES_DIRS = (
     #This lets Django's collectstatic store our bundles
-    os.path.join(BASE_DIR, 'assets'),
-    os.path.join(BASE_DIR, 'static'),
+    # os.path.join(BASE_DIR, 'assets'),
+    # os.path.join(BASE_DIR, 'static'),
 )
 
 WEBPACK_LOADER = {
@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 # ----------------------------------------------------------------------------
 
-
+STATIC_ROOT = 'static/'
 STATIC_PRECOMPILER_ROOT = os.path.dirname(BASE_DIR + '/static/')
 
 

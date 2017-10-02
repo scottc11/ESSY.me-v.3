@@ -72,8 +72,9 @@ Write google app default credentials
 gcloud auth application-default
 ```
 
-Copy all local static folder cloud storage static folder
+Copy local static folder and upload to cloud storage static folder
 ```
+python manage.py collectstatic
 gsutil rsync -R static/ gs://essy/static
 ```
 

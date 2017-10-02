@@ -8,3 +8,4 @@ home/pycache/
 *.pyc
 cloud_sql_proxy
 app.yaml
+static
