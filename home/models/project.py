@@ -21,10 +21,9 @@ class Project(models.Model):
     end_goal = models.TextField(blank=True, default='')
     thumbnail = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage(), default='')
     featured = models.BooleanField(default=False)
+    published = models.BooleanField(default=False)
     technologies = models.ManyToManyField(Technology)
     media_accounts = models.ManyToManyField(SocialMediaAccount)
-
-
     github = models.URLField(max_length=250, default='https://github.com/scottc11')
 
     def __str__(self):
@@ -36,5 +35,4 @@ class Project(models.Model):
     def save(self, *args, **kwargs):
         if not self.id:
             self.slug = slugify(self.title)
-
         super(Project, self).save(*args, **kwargs)

@@ -52,9 +52,6 @@ COLOR BLINDNESS: PROTANOMALY
   background-repeat: no-repeat;
   background-size: cover;
 }
-.project__header--tint {
-  background-color: rgba(0, 0, 0, 0.83);
-}
 .project__details {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -62,8 +59,8 @@ COLOR BLINDNESS: PROTANOMALY
 .project__body {
   padding: 15px;
   color: #1E1A17;
-  background: #EBF5EE;
-  font-size: 13pt;
+  background: #FFFFFF;
+  font-size: 16pt;
   font-family: 'VT323', monospace;
 }
 .project__post {

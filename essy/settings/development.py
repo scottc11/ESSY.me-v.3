@@ -24,16 +24,12 @@ DATABASES = {
         'USER': CFG['cloud_sql']['user']['name'],
         'PASSWORD': CFG['cloud_sql']['user']['pass'],
         'PORT': '5432',
+        'HOST': '127.0.0.1'
     }
 }
 
 
-DATABASES['default']['HOST'] = '/cloudsql/essy-178102:us-central1:essy-db'
-
-if os.getenv('GAE_INSTANCE'):
-    pass
-else:
-    DATABASES['default']['HOST'] = '127.0.0.1'
+# DATABASES['default']['HOST'] = '/cloudsql/essy-178102:us-central1:essy-db'
 
 
 

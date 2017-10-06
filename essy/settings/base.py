@@ -14,7 +14,7 @@ import os
 import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname( os.path.dirname( os.path.dirname(os.path.abspath(__file__) ) ))
+BASE_DIR = os.path.dirname( os.path.dirname( os.path.dirname(os.path.abspath(__file__) )))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -50,7 +50,7 @@ MIDDLEWARE = [
 STATICFILES_DIRS = (
     #This lets Django's collectstatic store our bundles
     # os.path.join(BASE_DIR, 'assets'),
-    # os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'),
 )
 
 WEBPACK_LOADER = {
@@ -120,7 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 # ----------------------------------------------------------------------------
 
-STATIC_ROOT = 'static/'
+# very strange bugs happen when this var is set
+# STATIC_ROOT = 'static/'
 STATIC_PRECOMPILER_ROOT = os.path.dirname(BASE_DIR + '/static/')
 
 

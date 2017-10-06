@@ -24,10 +24,5 @@ DATABASES = {
 
 DATABASES['default']['HOST'] = '/cloudsql/essy-178102:us-central1:essy-db'
 
-if os.getenv('GAE_INSTANCE'):
-    pass
-else:
-    DATABASES['default']['HOST'] = '127.0.0.1'
-
 
 STATIC_URL = 'https://storage.googleapis.com/{}/static/'.format(os.environ['CLOUD_STORAGE_BUCKET'])
