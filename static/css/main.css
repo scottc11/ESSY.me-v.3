@@ -12,7 +12,7 @@ COLOR BLINDNESS: PROTANOMALY
     SITE WIDE STYLES
 ----------------------------------------------------------  */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 h1 {
   margin: 0;
@@ -67,7 +67,6 @@ a:hover {
 }
 .base {
   background: #FE5F55;
-  height: 100%;
 }
 /*--------------------------------------*/
 /*        SOCIAL ICONS                  */

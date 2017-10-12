@@ -72,26 +72,36 @@ Write google app default credentials
 gcloud auth application-default
 ```
 
+-------- DEPLOY APP ----------
+
 Copy local static folder and upload to cloud storage static folder
 ```
 python manage.py collectstatic
 gsutil rsync -R static/ gs://essy/static
 ```
 
+Connect to the Postgres DB in cloud, and do any migrations if neseccary
+```
+./cloud_sql_proxy -instances="essy-178102:us-central1:essy-db"=tcp:5432
+python manage.py makemigrations
+python manage.py migrate
+```
 
----- DEPLOY APP ----
+Now deploy the app to App Engine
+
 ```
 gcloud app deploy
 ```
 
-DEBUG APP
+
+---- DEBUG APP ------
 ```
 gcloud app --project [PROJECT-ID] instances enable-debug
 gcloud app --project [PROJECT-ID] instances disable-debug
 
 ```
 
-Django SuperUser
+---- Django SuperUser ----
 ```
 username: scottcampbell
 password: developer password

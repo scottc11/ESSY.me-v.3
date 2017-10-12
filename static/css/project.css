@@ -37,7 +37,7 @@ COLOR BLINDNESS: PROTANOMALY
 }
 .project__header--heading p {
   display: inline-block;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   color: #FFFFFF;
 }
 .project__header--bg {
@@ -58,10 +58,10 @@ COLOR BLINDNESS: PROTANOMALY
 }
 .project__body {
   padding: 15px;
-  color: #1E1A17;
-  background: #FFFFFF;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.1);
   font-size: 16pt;
-  font-family: 'VT323', monospace;
+  font-family: 'Inconsolata', monospace;
 }
 .project__post {
   box-sizing: border-box;

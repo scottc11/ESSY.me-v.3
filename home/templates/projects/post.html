@@ -25,22 +25,23 @@
       <h6>Posted: <span class="color-accent--mikado">{{ post.pub_date }}</span></h6>
     </div>
 
-    <!-- THUMBNAIL -->
-    <div>
-      <div class="post__thumbnail" style="background-image: url({{ post.thumbnail.url }})">
-      </div>
-    </div>
 
+    <!-- BODY -->
     <div class="post__body">
-      <p>{{ post.body }}</p>
+      <p>{{ post.body|safe }}</p>
     </div>
 
-    <!-- SOUNDCLOUD EMBED -->
-    {% if post.soundcloud_embed %}
-    <div class="soundcloud">
-      {{ post.soundcloud_embed|safe }}
+    <!-- SCHEMATIC -->
+    {% if post.schematic %}
+    <div class="post__schematic">
+      <img src="{{ post.schematic.url }}" alt="">
     </div>
     {% endif %}
+    
+    <!-- THUMBNAIL -->
+    <!-- <div>
+      <div class="post__thumbnail" style="background-image: url({{ post.thumbnail.url }})"></div>
+    </div> -->
 
   </article>
 

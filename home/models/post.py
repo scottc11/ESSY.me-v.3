@@ -4,8 +4,7 @@ from essy.storage import GoogleCloudStorage
 from datetime import datetime
 
 def format_storage_path(instance, filename):
-    date = datetime.now()
-    date = datetime.isoformat(date).split('T')[0]
+    date = datetime.isoformat(instance.pub_date).split('T')[0]
     project_slug = instance.project.slug
     return 'projects/{0}/posts/{1}/{2}'.format(project_slug, date, filename)
 
@@ -19,6 +18,7 @@ class Post(models.Model):
     soundcloud_embed = models.CharField(max_length=1000, blank=True)
     soundcloud_link = models.CharField(max_length=500, blank=True)
     image = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage(), blank=True)
+    schematic = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage(), blank=True)
     thumbnail = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage())
     body = models.TextField()
     github = models.URLField(max_length=250, default='https://github.com/scottc11')

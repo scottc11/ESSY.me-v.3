@@ -25,6 +25,9 @@ COLOR BLINDNESS: PROTANOMALY
   background-repeat: no-repeat;
   background-size: cover;
 }
+.post__schematic img {
+  width: 100%;
+}
 .post__header {
   color: #EBF5EE;
 }
@@ -42,8 +45,7 @@ COLOR BLINDNESS: PROTANOMALY
   font-size: 13pt;
 }
 .post__body {
-  font-family: 'Roboto', sans-serif;
-  background: #EBF5EE;
-  color: #1E1A17;
+  font-family: 'Roboto Mono', monospace;
+  color: #FFFFFF;
   padding: 15px;
 }
