@@ -14,7 +14,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField()
     title = models.CharField(max_length=250, blank=False)
     sub_title = models.CharField(max_length=500, blank=False)
-    project = models.ForeignKey('Project', on_delete=models.SET_NULL, null=True);
+    project = models.ForeignKey('Project', on_delete=models.SET_NULL, null=True)
     soundcloud_embed = models.CharField(max_length=1000, blank=True)
     soundcloud_link = models.CharField(max_length=500, blank=True)
     image = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage(), blank=True)
