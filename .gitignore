@@ -1,9 +1,11 @@
 db.sqlite3
 node_modules/
+photos/
 webpack-stats.json
 __pycache__/
 essy/pycache/
 home/pycache/
+*.DS_Store
 *.py[cod]
 *.pyc
 cloud_sql_proxy

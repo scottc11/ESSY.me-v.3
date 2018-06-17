@@ -6,12 +6,14 @@ from rest_framework.response import Response
 from rest_framework import status
 
 from home.models.project import Project
+from home.models.social_media import SocialMediaAccount
 from home.serializers import projectSerializer
 
 # Create your views here.
 def home(request):
     projects = Project.objects.order_by('pub_date')
-    context = { 'projects': projects }
+    accounts = SocialMediaAccount.objects.all()
+    context = { 'projects': projects, 'accounts': accounts }
     return render(request, 'home/home.html', context)
 
 
