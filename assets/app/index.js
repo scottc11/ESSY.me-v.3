@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styles from '../less/index.less';
 
 import ProjectList from './components/project_list.js'
 import ProjectListItem from './components/project_list_item.js'

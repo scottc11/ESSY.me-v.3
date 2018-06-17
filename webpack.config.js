@@ -1,6 +1,10 @@
-let path = require('path');
-let webpack = require('webpack');
-let BundleTracker = require('webpack-bundle-tracker');
+const path = require('path');
+const webpack = require('webpack');
+const BundleTracker = require('webpack-bundle-tracker');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+
 
 module.exports = {
   // the base directry (absolute path) for resolving the entry option
@@ -13,18 +17,23 @@ module.exports = {
 
   output: {
     // where you want your compiled bundle to be stored
-    path: path.resolve('./static/bundles/'),
-    filename: 'bundle.js',
+    path: path.resolve('./home/static/bundles/'),
+    filename: '[name].bundle.js',
   },
 
   plugins: [
     // telss webpack where to store data about your bundles
     new BundleTracker({filename: './webpack-stats.json'}),
+    new ExtractTextPlugin("[name].styles.css"),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
-    })
+    }),
+    new CleanWebpackPlugin(
+      ['./home/static/bundles/'],
+      { root: process.cwd() }
+    ),
   ],
 
   module: {
@@ -38,7 +47,27 @@ module.exports = {
           // specify that we will be dealing with React code
           presets: ['react']
         }
+      },
+      // LESS/CSS
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract([ 'css-loader', 'less-loader' ])
+      },
+      // IMAGES
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      },
+      // FONTS
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
       }
+
     ]
   },
   watchOptions: {

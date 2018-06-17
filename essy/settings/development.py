@@ -14,15 +14,15 @@ DEBUG = True
 
 
 DATABASES = {
-    'default': {
+    'sqlite': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'test': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': CFG['cloud_sql']['database_name'],
-        'USER': CFG['cloud_sql']['user']['name'],
-        'PASSWORD': CFG['cloud_sql']['user']['pass'],
+        'NAME': CFG['local_psql']['database_name'],
+        'USER': CFG['local_psql']['user']['name'],
+        'PASSWORD': CFG['local_psql']['user']['pass'],
         'PORT': '5432',
         'HOST': '127.0.0.1'
     }
