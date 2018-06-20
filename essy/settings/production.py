@@ -1,6 +1,6 @@
-
 import os
-import dj_database_url
+import ast
+import json
 from .base import *
 
 print('settings: production ')
