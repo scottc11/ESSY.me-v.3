@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="home__header">
+  <h1 class="home__essy">Scott</h1>
+  <h1 class="home__essy">Campbell</h1>
+  <h6>Toronto based <span class="color-accent--yellow">Artist, Developer, and Maker</span></h6>
+
+  <div class="icons__media">
+    <ul>
+      {% for account in accounts.all %}
+      <li>
+        <a href="{{ account.link }}" target="_blank" title={{ account.name }}><span class="{{ account.icon_class }}"></span></a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+</div>

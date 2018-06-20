@@ -1,29 +1,28 @@
-
 from django.shortcuts import render, get_object_or_404
 from django.contrib import admin
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import status
 
+from home.models.post import Post
 from home.models.project import Project
 from home.models.social_media import SocialMediaAccount
-from home.serializers import projectSerializer
+
 
 # Create your views here.
 def home(request):
     projects = Project.objects.order_by('pub_date')
     accounts = SocialMediaAccount.objects.all()
     context = { 'projects': projects, 'accounts': accounts }
-    return render(request, 'home/home.html', context)
+    return render(request, 'home.html', context)
 
+def projects(request):
+    projects = Project.objects.order_by('pub_date')
+    return render(request, 'projects.html', {'projects': projects})
 
-# ------ API --------
-# list all projects or create a new one.
-class projectsList(APIView):
+def project(request, num):
+    accounts = SocialMediaAccount.objects.all()
+    project = get_object_or_404(Project, pk=num)
+    return render(request, 'project.html', { 'project': project, 'accounts': accounts })
 
-    def get(self, request):
-        projects = Project.objects.all()
-        serializer = projectSerializer(projects, many=True)
-        return Response(serializer.data)
-    def post(self):
-        pass
+def post(request, prj, post):
+    project = get_object_or_404(Project, pk=prj)
+    post = Post.objects.get(id=post, project=prj)
+    return render(request, 'post.html', { 'project': project, 'post': post })

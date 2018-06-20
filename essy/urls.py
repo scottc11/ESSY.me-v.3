@@ -2,9 +2,9 @@
 from django.conf.urls import url
 from django.contrib import admin
 from rest_framework.urlpatterns import format_suffix_patterns
-from home.views.views import projectsList, home
+from home.views.views import home, projects, project, post
 from home.views.blog import blog, post_detail
-from home.views.projects import projects, project, post
+from home.views.api import projectsList
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
