@@ -51,10 +51,16 @@ Write google app default credentials
 gcloud auth application-default
 ```
 
--------- DEPLOY APP ----------
+
+## -------- DEPLOY APP ----------
 
 Copy local static folder and upload to cloud storage static folder
 ```
 python manage.py collectstatic
 gsutil rsync -R static/ gs://essy/static
+```
+
+Now deploy the app to Heroku
+```
+git push heroku master
 ```

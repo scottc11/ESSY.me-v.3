@@ -124,7 +124,12 @@ USE_TZ = True
 # STATIC_ROOT = 'static/'
 STATIC_PRECOMPILER_ROOT = os.path.dirname(BASE_DIR + '/static/')
 
+STATIC_URL = '/static/'
+STATIC_ROOT = 'static'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'assets/media'),
+)
 
 # GOOGLE CLOUD
 # ----------------------------------------------------------------------------

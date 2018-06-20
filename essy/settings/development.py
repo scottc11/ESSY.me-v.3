@@ -27,10 +27,3 @@ DATABASES = {
         'HOST': '127.0.0.1'
     }
 }
-
-
-# DATABASES['default']['HOST'] = '/cloudsql/essy-178102:us-central1:essy-db'
-
-
-
-STATIC_URL = '/static/'
