@@ -12,6 +12,15 @@ def format_storage_path(instance, filename):
 
 # put your models here
 class Project(models.Model):
+
+    ORDER_WEIGHT_CHOICES = (
+        (1, '1'),
+        (2, '2'),
+        (3, '3'),
+        (4, '4'),
+        (5, '5'),
+    )
+
     pub_date = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100, blank=False, default='')
     slug = models.SlugField(default='', blank=True)
@@ -22,8 +31,12 @@ class Project(models.Model):
     thumbnail = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage(), default='')
     featured = models.BooleanField(default=False)
     published = models.BooleanField(default=False)
+    order_weight = models.IntegerField(choices=ORDER_WEIGHT_CHOICES, default=1)
     technologies = models.ManyToManyField(Technology)
     github = models.URLField(max_length=250, default='https://github.com/scottc11')
+
+    class Meta:
+        ordering = ('-order_weight',)
 
     def __str__(self):
         return self.title

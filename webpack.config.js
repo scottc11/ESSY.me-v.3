@@ -61,7 +61,11 @@ module.exports = {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ]
       },
-
+      // JSON
+      {
+        test: /\.json$/,
+        use: [ 'json-loader' ]
+      },
       // IMAGES
       {
         test: /\.(png|svg|jpg|gif)$/,

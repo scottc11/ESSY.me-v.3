@@ -4,11 +4,6 @@
 {% block content %}
 <section id="home" class="home">
 
-  <div class="col-xs-12">
-    {% include './header.html' %}
-  </div>
-
-
   <div class="col-xs-12 home__divider">
     <hr class="custom-hr">
   </div>
@@ -41,21 +36,7 @@
 
     <h3 class="home__heading"><span class="color-accent--orange">::::</span> projects <span class="color-accent--orange">::::</span></h3>
 
-    {% for project in projects %}
-      <div class="col-xs-12">
-        <a href="{% url 'project' project.id %}">
-          <div class="projects__preview">
-            <div class="tint"></div>
-            <div class="projects__preview--bg" style='background-image: url({{ project.thumbnail.url }})'></div>
-            <div class="projects__preview--heading">
-              <h5>{{ project.title }}</h6>
-              <br>
-              <h6>{{ project.sub_title }}</h6>
-            </div>
-          </div>
-        </a>
-      </div>
-    {% endfor %}
+    {% include './projects_list.html' %}
   </div>
 
 </section>

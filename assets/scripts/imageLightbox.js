@@ -1,4 +1,6 @@
 
+
+
 // Open the Modal
 function openModal(path) {
   document.getElementById('myModal').style.display = "block";
@@ -9,3 +11,7 @@ function openModal(path) {
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
+
+// particlesJS.load('particles-js', './static/particlesConfig.json', function() {
+//   console.log('callback - particles.js config loaded');
+// });

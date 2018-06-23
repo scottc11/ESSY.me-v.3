@@ -8,14 +8,14 @@ from home.models.technology import Technology
 
 # Create your views here.
 def home(request):
-    projects = Project.objects.order_by('pub_date')
+    projects = Project.objects.filter(featured=True)
     technologies = Technology.objects.all()
     accounts = SocialMediaAccount.objects.all()
     context = { 'projects': projects, 'accounts': accounts, 'technologies': technologies }
     return render(request, 'home.html', context)
 
 def projects(request):
-    projects = Project.objects.order_by('pub_date')
+    projects = Project.objects.all()
     return render(request, 'projects.html', {'projects': projects})
 
 def project(request, num):
