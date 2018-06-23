@@ -1,23 +1,30 @@
 @import 'variables';
 
-.home {
-  color: @white;
-  padding: 20px;
-  width: auto;
-
-  &__essy {
+.header {
+  margin-top: 15px;
+  text-align: center;
+  & h6 {
+    font-weight: @roboto-thin;
+  }
+  &__logo {
     color: @white;
     font-family: @bungee-shade;
     font-size: 40pt;
     margin: 0;
   }
+}
 
-  &__header {
-    margin-top: 15px;
-    text-align: center;
-    & h6 {
-      font-weight: @roboto-thin;
-    }
+
+.home {
+  color: @white;
+  padding: 20px;
+  width: auto;
+  height: 100vh;
+  &__heading {
+    font-family: @bungee-hairline;
+  }
+  &__divider {
+    margin-top: 10px;
   }
 }
 
@@ -28,6 +35,22 @@
   position: absolute;
   overflow: auto;
   background: rgba(0, 0, 0, 0.3);
+}
+
+
+.technologies {
+  text-align: center;
+  & ul {
+    list-style: none;
+    padding: 0;
+    & a:hover { text-decoration: none; }
+    & li {
+      display: inline-block;
+      font-size: @xs-small;
+      font-family: @roboto;
+      color: @blue;
+    }
+  }
 }
 
 .projects {

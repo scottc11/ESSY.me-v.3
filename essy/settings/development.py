@@ -25,5 +25,13 @@ DATABASES = {
         'PASSWORD': CFG['local_psql']['user']['pass'],
         'PORT': '5432',
         'HOST': '127.0.0.1'
+    },
+    'heroku': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': CFG['heroku_psql']['database_name'],
+        'USER': CFG['heroku_psql']['user']['name'],
+        'PASSWORD': CFG['heroku_psql']['user']['pass'],
+        'PORT': '5432',
+        'HOST': '127.0.0.1'
     }
 }

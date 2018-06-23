@@ -34,7 +34,7 @@
       <ul>
         {% for tech in project.technologies.all %}
         <a href="{{ tech.link }}" target="_blank">
-          <li class="button-link">
+          <li class="pill">
           {{ tech.name }}
           </li>
         </a>
@@ -62,7 +62,7 @@
     </div>
 
     <div class="project__post--img" style='background-image: url({{ post.image.url }})'></div>
-    
+
     <div class="post__body">
       <p>{{ post.body|safe }}</p>
     </div>

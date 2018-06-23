@@ -4,13 +4,14 @@ from django.contrib import admin
 from home.models.post import Post
 from home.models.project import Project
 from home.models.social_media import SocialMediaAccount
-
+from home.models.technology import Technology
 
 # Create your views here.
 def home(request):
     projects = Project.objects.order_by('pub_date')
+    technologies = Technology.objects.all()
     accounts = SocialMediaAccount.objects.all()
-    context = { 'projects': projects, 'accounts': accounts }
+    context = { 'projects': projects, 'accounts': accounts, 'technologies': technologies }
     return render(request, 'home.html', context)
 
 def projects(request):

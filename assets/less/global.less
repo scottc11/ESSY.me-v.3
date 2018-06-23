@@ -20,7 +20,6 @@ a {
   }
 }
 
-
 // ----------------------------------------------------------------------------
 //                      GLOBAL CLASSES
 // ----------------------------------------------------------------------------
@@ -35,9 +34,19 @@ a {
 }
 
 
-.custom-hr { border: 1px solid @gunmetal; }
+.custom-hr {
+  border: 0;
+  height: 1px;
+  width: 80%;
+  margin-top: 10px;
+  background: @opaque;
+  background-image: linear-gradient(to right, @gunmetal, @opaque, @gunmetal);
+}
+
 .text-center { text-align: center; }
 
+.margin-top-20 { margin-top: 20px; }
+.margin-bottom-20 { margin-bottom: 20px; }
 
 // ----------------------------------------------------------------------------
 .base {
@@ -64,5 +73,24 @@ a {
     }
     & ul li a { color: @white; }
     & ul li a:hover { color: @blue; }
+  }
+}
+
+.pill {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 5px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 0.5px solid @opaque;
+  font-size: @small;
+  font-family: Roboto;
+  font-weight: 300;
+  color: @white;
+  margin: 5px;
+  &:hover {
+    cursor: pointer;
+    border: 0.5px solid rgba(0, 0, 0, 0);
+    background: @white;
   }
 }
