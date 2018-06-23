@@ -13,7 +13,10 @@ module.exports = {
   // the entry point we created earlier. Note that './' means
   // your current directory. You don't have to specify the extension now,
   // because you will specify extensions later in the `resolve` section
-  entry: './assets/app/index.js',
+  entry: {
+    main: './assets/app/index.js',
+    scripts: './assets/scripts/index.js'
+  },
 
   output: {
     // where you want your compiled bundle to be stored
@@ -48,11 +51,17 @@ module.exports = {
           presets: ['react']
         }
       },
-      // LESS/CSS
+      // LESS to CSS
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract([ 'css-loader', 'less-loader' ])
       },
+      // CSS
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
+      },
+
       // IMAGES
       {
         test: /\.(png|svg|jpg|gif)$/,

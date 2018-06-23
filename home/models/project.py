@@ -23,7 +23,6 @@ class Project(models.Model):
     featured = models.BooleanField(default=False)
     published = models.BooleanField(default=False)
     technologies = models.ManyToManyField(Technology)
-    media_accounts = models.ManyToManyField(SocialMediaAccount)
     github = models.URLField(max_length=250, default='https://github.com/scottc11')
 
     def __str__(self):

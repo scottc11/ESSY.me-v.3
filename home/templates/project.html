@@ -55,18 +55,34 @@
       <div class="project__post--header">
         <h4>{{ post.title }}</h4>
         <br>
-        <h5>{{ post.sub_title }}</h5>
-        <br>
         <h5>{{ post.pub_date }}</h5>
       </div>
     </div>
 
-    <div class="project__post--img" style='background-image: url({{ post.image.url }})'></div>
+
+    {% if post.images.all %}
+
+      <div class="project__post__images">
+        {% for image in post.images.all %}
+        <div class="project__post--img">
+          <img src="{{ image.image.url }}" onclick="openModal('{{ image.image.url }}')" />
+        </div>
+        {% endfor %}
+      </div>
+
+    {% endif %}
 
     <div class="post__body">
       <p>{{ post.body|safe }}</p>
     </div>
     {% endfor %}
   </article>
+
+  <div id="myModal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="closeModal()">
+      <img id="modal-image" src="" style="width:100%" onclick="closeModal()">
+    </div>
+  </div>
+
 </section>
 {% endblock %}
