@@ -33,7 +33,8 @@ class Project(models.Model):
     published = models.BooleanField(default=False)
     order_weight = models.IntegerField(choices=ORDER_WEIGHT_CHOICES, default=1)
     technologies = models.ManyToManyField(Technology)
-    github = models.URLField(max_length=250, default='https://github.com/scottc11')
+    github = models.URLField(max_length=250, blank=True)
+    website = models.URLField(max_length=250, blank=True)
 
     class Meta:
         ordering = ('-order_weight',)

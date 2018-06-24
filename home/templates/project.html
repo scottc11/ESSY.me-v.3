@@ -5,10 +5,10 @@
 {% block content %}
 <section class="margin-top-20">
 
-  <article class="project__container col-xs-12">
+  <article class="project__container row">
 
     <!-- project thumbnail -->
-    <div class="project__header">
+    <div class="project__header col-xs-12">
       <div class="project__header--bg" style="background-image: url({{ project.thumbnail.url }})"></div>
       <div class="project__header--heading">
         <h1>{{ project.title }}</h1>
@@ -18,13 +18,9 @@
     </div>
     <!-- /project thumbnail -->
 
-    <time class="sidebar__summary--date">{{ project.pub_date|date:"M d Y" }}</time>
+    <time class="sidebar__summary--date col-xs-12">{{ project.pub_date|date:"M d Y" }}</time>
 
-    <div class="">
-      <a href="{{ project.github }}" target="_blank" title="github repository"><h3 class="fab fa-github"></h3></a>
-    </div>
-
-    <div class="project__tech">
+    <div class="project__tech col-xs-12 col-sm-4">
       <h4>technologies</h4>
       <ul>
         {% for tech in project.technologies.all %}
@@ -35,6 +31,14 @@
         </a>
         {% endfor %}
       </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 text-center project--icon">
+      <a href="{{ project.github }}" target="_blank" title="github repository"><span class="fab fa-github"></span></a>
+    </div>
+
+    <div class="col-xs-12 col-sm-4 text-center project--icon">
+      <a href="{{ project.github }}" target="_blank" title="Website"><span class="fas fa-globe"></span></a>
     </div>
 
     <div class="project__body">

@@ -35,3 +35,16 @@ DATABASES = {
         'HOST': '127.0.0.1'
     }
 }
+
+PROJECT_ID = 'essy-178102'
+CLOUD_STORAGE_BUCKET = 'essy'
+MEDIA_PREFIX = "media/"
+
+CLOUD_STORAGE_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(
+    bucket_name=CLOUD_STORAGE_BUCKET
+)
+
+MEDIA_URL = "{gcs_root}{prefix}/".format(
+    gcs_root=CLOUD_STORAGE_ROOT,
+    prefix=MEDIA_PREFIX,
+)
