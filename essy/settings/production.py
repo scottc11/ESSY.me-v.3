@@ -34,7 +34,7 @@ DATABASES = {
 
 
 PROJECT_ID = os.environ['GC_PROJECT_ID']
-MEDIA_PREFIX = "static/media/"
+MEDIA_PREFIX = "media/"
 CLOUD_STORAGE_BUCKET = os.environ['GC_STORAGE_BUCKET']
 
 STATIC_URL = 'https://storage.googleapis.com/{}/static/'.format(CLOUD_STORAGE_BUCKET)
