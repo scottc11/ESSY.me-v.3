@@ -1,10 +1,9 @@
 {% load static %}
 
 {% for project in projects %}
-  <div class="col-xs-12">
+  <div>
     <a href="{% url 'project' project.id %}">
       <div class="projects__preview">
-        <div class="tint"></div>
         <div class="projects__preview--bg" style='background-image: url({{ project.thumbnail.url }})'></div>
         <div class="projects__preview--heading">
           <h5>{{ project.title }}</h6>

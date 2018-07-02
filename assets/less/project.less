@@ -37,6 +37,12 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+      -moz-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -62,7 +68,7 @@
   &--icon {
     padding: 20px;
     & a span {
-      margin: 0 20px;
+      margin: 20px;
       color: @orange;
       font-size: 100pt;
       -webkit-transition: color 0.5s; /* Safari */

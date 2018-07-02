@@ -1,0 +1,21 @@
+@import 'variables';
+
+
+.profile {
+  &__about {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    & p {
+      line-height: 2;
+    }
+  }
+  &__pic {
+    text-align: center;
+    & img {
+      border-radius: 50%;
+      border: 1px solid @green;
+      box-shadow: @box-shadow;
+    }
+  }
+}
