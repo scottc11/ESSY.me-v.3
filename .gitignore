@@ -2,6 +2,7 @@ db.sqlite3
 node_modules/
 photos/
 webpack-stats.json
+package-lock.json
 __pycache__/
 essy/pycache/
 home/pycache/
