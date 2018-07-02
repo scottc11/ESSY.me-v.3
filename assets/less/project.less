@@ -17,16 +17,13 @@
       z-index: 2;
       margin: 15px;
       color: @white;
-      & h1, h4, h5 {
+      & h1 { font-weight: 700; }
+      & time { color: @gunmetal; }
+      & h1, h4, h5, time {
         display: inline-block;
         font-family: @bungee-hairline;
         padding: 15px;
         background-color: @header-bg;
-      }
-      & p {
-        display: inline-block;
-        font-family: @roboto;
-        color: @white;
       }
     }
 
@@ -46,25 +43,26 @@
   &__details {
     margin-top: 10px;
     margin-bottom: 10px;
-  }
-
-  &__tech {
-    & ul {
-      list-style: none;
-      padding: 0;
-      & a:hover { text-decoration: none; }
-      & li {
-        display: inline-block;
-        font-size: @xs-small;
-        font-family: @roboto;
-        color: @blue;
+    &--tech {
+      & ul {
+        list-style: none;
+        padding: 0;
+        & a:hover { text-decoration: none; }
+        & li {
+          display: inline-block;
+          font-size: @xs-small;
+          font-family: @roboto;
+          color: @blue;
+        }
       }
     }
+
   }
 
   &--icon {
     padding: 20px;
     & a span {
+      margin: 0 20px;
       color: @orange;
       font-size: 100pt;
       -webkit-transition: color 0.5s; /* Safari */
@@ -78,8 +76,7 @@
   &__body {
     padding: 15px;
     color: @white;
-    // background: @text-bg;
-    font-size: @medium;
+    font-size: @small;
     font-family: @console;
   }
 

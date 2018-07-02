@@ -1,9 +1,11 @@
 {% load static %}
 
 <div class="header">
-  <h1 class="header__logo">Scott</h1>
-  <h1 class="header__logo">Campbell</h1>
-  <h6>Toronto based <span class="color-accent--yellow">Full-Stack Web Developer, Artist, and Maker</span></h6>
+  <a href={% url 'home' %} class="">
+    <h1 class="header__logo">Scott</h1>
+    <h1 class="header__logo">Campbell</h1>
+  </a>
+  <h6 class="color-accent--yellow">Full-Stack Web Developer, Artist, and Maker of Things</h6>
 
   <div class="icons__media">
     <ul>
