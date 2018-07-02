@@ -6,23 +6,32 @@
 <section class="margin-top-20">
 
   <article class="project__container row">
-
     <!-- project thumbnail -->
-    <div class="project__header col-xs-12">
-      <div class="project__header--bg" style="background-image: url({{ project.thumbnail.url }})"></div>
-      <div class="project__header--heading">
-        <h1>{{ project.title }}</h1>
-        <br>
-        <h4>{{ project.sub_title }}</h4>
-        <br>
-        <time>{{ project.pub_date|date:"M d Y" }}</time>
-      </div>
+    <div class="project__img col-xs-12">
+      <img src={{ project.thumbnail.url }} onclick="openModal('{{ project.thumbnail.url }}')">
     </div>
     <!-- /project thumbnail -->
 
+    <!-- ****** PROJECT BODY ******* -->
+
+    <div class="col-xs-12">
+      <div class="project__header">
+        <div class="project__header--heading">
+          <h1>{{ project.title }}</h1>
+          <br>
+          <h4>{{ project.sub_title }}</h4>
+          <br>
+          <time>{{ project.pub_date|date:"M d Y" }}</time>
+        </div>
+      </div>
+      <div class="project__body">
+        <p>{{ project.description }}</p>
+      </div>
+    </div>
+
 
     <!-- PROJECT DETAILS AND LINKS -->
-    <div class="project__details col-xs-12 col-md-4">
+    <div class="project__details col-xs-12">
 
       <div class="project__details--tech">
         <h4 class="heading">technologies</h4>
@@ -40,19 +49,11 @@
     </div>
 
 
-    <!-- ****** PROJECT BODY ******* -->
-
-    <div class="col-xs-12 col-md-8">
-
-      <div class="text-center project--icon">
-        <a href="{{ project.github }}" target="_blank" title="github repository"><span class="fab fa-github"></span></a>
-        <a href="{{ project.website }}" target="_blank" title="Website"><span class="fas fa-globe"></span></a>
-      </div>
-
-      <div class="project__body">
-        <p>{{ project.description }}</p>
-      </div>
+    <div class="col-xs-12 project--icon">
+      <a href="{{ project.github }}" target="_blank" title="github repository"><span class="fab fa-github"></span></a>
+      <a href="{{ project.website }}" target="_blank" title="Website"><span class="fas fa-globe"></span></a>
     </div>
+
 
 
     <!-- ****** POSTS ******* -->
@@ -71,7 +72,7 @@
 
       <div class="project__post__images">
         {% for image in post.images.all %}
-        <div class="project__post--img">
+        <div class="project__img">
           <img src="{{ image.image.url }}" onclick="openModal('{{ image.image.url }}')" />
         </div>
         {% endfor %}

@@ -5,25 +5,24 @@
     padding: 25px;
   }
 
-  &__header {
-    height: 300px;
-    overflow: hidden;
-    position: relative;
+  &__img {
+    margin: 20px 0;
+    & img {
+      width: 100%;
+      box-shadow: @box-shadow;
+    }
+  }
 
+  &__header {
     &--heading {
       display: inline-block;
-      position: absolute;
-      top: 0;
-      z-index: 2;
-      margin: 15px;
       color: @white;
-      & h1 { font-weight: 700; }
-      & time { color: @gunmetal; }
+      & h1 { font-weight: 700; background-color: @header-bg; }
+      & time { color: @yellow; }
       & h1, h4, h5, time {
         display: inline-block;
         font-family: @bungee-hairline;
         padding: 15px;
-        background-color: @header-bg;
       }
     }
 
@@ -99,14 +98,6 @@
       }
       & h4 { font-size: @small; }
       & h5 { font-size: @xs-small; }
-    }
-    &--img {
-      margin: 20px 0;
-      padding: 10px;
-      & img {
-        height: 300px;
-        box-shadow: @box-shadow;
-      }
     }
   }
 }
