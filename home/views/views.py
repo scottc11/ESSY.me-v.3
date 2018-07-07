@@ -27,3 +27,7 @@ def post(request, prj, post):
     project = get_object_or_404(Project, pk=prj)
     post = Post.objects.get(id=post, project=prj)
     return render(request, 'post.html', { 'project': project, 'post': post })
+
+
+def kenobi(request):
+    return render(request, 'kenobi.html')

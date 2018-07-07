@@ -15,7 +15,8 @@ module.exports = {
   // because you will specify extensions later in the `resolve` section
   entry: {
     main: './assets/app/index.js',
-    scripts: './assets/scripts/index.js'
+    scripts: './assets/scripts/index.js',
+    particles: './assets/scripts/threejs/index.js'
   },
 
   output: {
@@ -69,9 +70,7 @@ module.exports = {
       // IMAGES
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader'
-        ]
+        loader: ['file-loader']
       },
       // FONTS
       {
