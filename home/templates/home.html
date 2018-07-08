@@ -4,12 +4,7 @@
 {% block content %}
 <section id="home" class="home">
 
-  <!-- HEADER -->
-  <div class="col-xs-12">
-    {% include './header.html' %}
-  </div>
-
-  <div class="row">
+  <div class="col-xs-12 profile">
     <div class="col-xs-12 col-md-4 profile__pic">
       <img src={% static '/images/profile_pic.jpeg' %} alt="">
     </div>
@@ -24,11 +19,11 @@
   </div>
 
 
-  <div class="text-center col-xs-12">
+  <div class="text-center col-xs-12 technologies">
 
     <h3 class="home__heading"><span class="color-accent--orange">::::</span> technologies I like working with <span class="color-accent--orange">::::</span></h3>
 
-    <div class="technologies">
+    <div class="">
       <ul>
         {% for t in technologies %}
           <a href="{{ t.link }}" target="_blank">

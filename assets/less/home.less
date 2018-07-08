@@ -1,19 +1,5 @@
 @import 'variables';
 
-.header {
-  margin-top: 15px;
-  text-align: center;
-  & h6 {
-    font-weight: @roboto-thin;
-  }
-  &__logo {
-    color: @white;
-    font-family: @bungee-shade;
-    font-size: 40pt;
-    margin: 0;
-  }
-}
-
 
 .home {
   color: @white;
@@ -22,25 +8,17 @@
   height: 100vh;
   &__heading {
     font-family: @bungee-hairline;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   &__divider {
-    margin-top: 10px;
+    margin: 80px 0;
   }
-}
-
-.tint {
-  z-index: 2;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.3);
 }
 
 
 .technologies {
   text-align: center;
+  // background-image: linear-gradient(to left, #ffffff, #cbcbcc, #99999a, #6a6a6c, #3e3f41);
   & ul {
     list-style: none;
     padding: 0;
@@ -61,8 +39,7 @@
   &__preview {
     box-sizing: border-box;
     height: 250px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 40px 0;
     padding: 0;
     position: relative;
     box-shadow: @box-shadow;

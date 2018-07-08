@@ -81,7 +81,9 @@
 
       {% if post.youtube_video %}
         <div class="project__post__video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/MN_cfRW3QV4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <div class="project__post__video--container">
+            <iframe src={{ post.youtube_video }} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
         </div>
       {% endif %}
       <div class="post__body">
