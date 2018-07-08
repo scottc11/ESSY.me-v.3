@@ -15,6 +15,7 @@ class PostInline(admin.TabularInline):
 
 class ProjectAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
+    inlines = [PostInline]
 
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
