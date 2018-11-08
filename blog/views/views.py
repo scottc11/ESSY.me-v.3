@@ -5,7 +5,7 @@ from home.models.post import Post
 def blog(request):
     posts = Post.objects.all()
     context = { 'posts': posts }
-    return render(request, 'blog/blog.html', context)
+    return render(request, 'blog.html', context)
 
 def post_detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
