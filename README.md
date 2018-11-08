@@ -64,3 +64,8 @@ Now deploy the app to Heroku
 ```
 git push heroku master
 ```
+
+
+# ------- PACKAGES -------------
+
+### [django_comments](https://django-contrib-comments.readthedocs.io/en/latest/quickstart.html)
