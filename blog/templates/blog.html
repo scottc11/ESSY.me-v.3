@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header %}
+  {% include './blog_header.html' %}
+{% endblock %}
+
 {% block content %}
 <!-- entry.body|linebreaks|safe -->
 <div class="">
-  HELP
   {% for entry in entries %}
 
     <h1>{{ entry.title }}</h1>
@@ -17,4 +20,8 @@
     </div>
   {% endfor %}
 </div>
+{% endblock %}
+
+{% block footer %}
+  {% include './blog_footer.html' %}
 {% endblock %}

@@ -2,16 +2,51 @@
 
 
 body {
-  font-family: @roboto;
+  font-family: @roboto-condensed;
+  background: rgb(242, 242, 242);
+  font-weight: 300;
+  color: @gunmetal;
 }
 
-p, h1, h2, h3, h4, h5, h6 { color: @white; }
+h1, h2, h3, h4, h5, h6 {
+  font-family: @roboto;
+  font-weight: 300;
+  margin: 1em 0 .5em;
+  font-style: normal;
+  letter-spacing: .06em;
+}
 
-h1 { margin: 0; }
-h3 { font-size: 20pt; }
-h4 { font-size: 16pt; }
-h5 { font-size: 14pt; }
-h6 { font-size: 12pt; }
+h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+h2 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+h3 {
+  font-size: 1.3em;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 400;
+}
+h4 { font-size: 1em; }
+h5 { font-size: .8em; }
+h6 { font-size: .6em; }
+
+p {
+  line-height: 1.8em;
+  text-transform: none;
+  text-decoration: none;
+  font-weight: 300;
+  font-style: normal;
+  margin: 0 0 1em;
+}
 
 a {
   color: inherit;
@@ -19,8 +54,39 @@ a {
   &:hover {
     text-decoration: none;
     color: @blue;
+    outline:0;
+  }
+  &:focus {
+    outline:thin dotted;
+  }
+  &:active {
+    outline:0;
   }
 }
+
+
+ul {
+  margin: 1em 0;
+  padding: 0 0 0 40px;
+}
+
+form {
+  margin:0;
+}
+
+textarea {
+  margin:0;
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+  &:invalid {
+    background-color: #f0dddd;
+  }
+}
+
+
+
+
 
 // ----------------------------------------------------------------------------
 //                      GLOBAL CLASSES
@@ -56,7 +122,7 @@ a {
 
 // ----------------------------------------------------------------------------
 .base {
-  background: @gunmetal;
+  // background: @gunmetal;
 }
 
 /*--------------------------------------*/
