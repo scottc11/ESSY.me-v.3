@@ -18,6 +18,15 @@
     <div class="">
       {{ entry.body|safe }}
     </div>
+
+    {% if entry.images.all %}
+      {% for image in entry.images.all %}
+        <div class="entry__img">
+          <img src="{{ image.image.url }}" onclick="openModal('{{ image.image.url }}')" />
+        </div>
+      {% endfor %}
+    {% endif %}
+
   {% endfor %}
 </div>
 {% endblock %}

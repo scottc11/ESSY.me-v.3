@@ -37,7 +37,7 @@ DATABASES = {
 }
 
 PROJECT_ID = 'essy-178102'
-CLOUD_STORAGE_BUCKET = 'essy'
+CLOUD_STORAGE_BUCKET = 'essy-dev'
 MEDIA_PREFIX = "media/"
 
 CLOUD_STORAGE_ROOT = "https://storage.googleapis.com/{bucket_name}/".format(

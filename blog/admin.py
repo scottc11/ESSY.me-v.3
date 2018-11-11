@@ -1,6 +1,5 @@
 from django.contrib import admin
-from blog.models import Entry
-from home.models.image import Image
+from blog.models import Entry, Image
 # Register your models here.
 
 class ImageInlineAdmin(admin.TabularInline):
