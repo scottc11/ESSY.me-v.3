@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import admin
-from home.models.post import Post
+from blog.models import Entry
 
 def blog(request):
-    posts = Post.objects.all()
-    context = { 'posts': posts }
+    entries = Entry.objects.all()
+    context = { 'entries': entries }
     return render(request, 'blog.html', context)
 
 def post_detail(request, post_id):

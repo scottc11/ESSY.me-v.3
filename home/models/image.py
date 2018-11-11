@@ -3,7 +3,7 @@ from django.db import models
 from django.conf import settings
 from essy.storage import GoogleCloudStorage
 from .post import Post
-
+from blog.models import Entry
 
 def format_storage_path(instance, filename):
     post_slug = instance.post.slug
@@ -13,6 +13,7 @@ def format_storage_path(instance, filename):
 class Image(models.Model):
     image = models.ImageField(upload_to=format_storage_path, storage=GoogleCloudStorage(), max_length=300, blank=True)
     post = models.ForeignKey(Post, related_name='images', blank=True, null=True)
+    entry = models.ForeignKey(Entry, related_name='images', blank=True, null=True)
     description = models.TextField(blank=True, default='')
     thumbnail = models.BooleanField(default=False)
     pub_date = models.DateTimeField(auto_now_add=True)

@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'django_comments',
     'tagging',
     'webpack_loader',
@@ -140,6 +141,6 @@ STATICFILES_DIRS = (
 
 DEFAULT_FILE_STORAGE = 'google.storage.googleCloud.GoogleCloudStorage'
 
-
+SITE_ID = 1
 
 print('-----------------------------')

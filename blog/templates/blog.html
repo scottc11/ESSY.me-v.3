@@ -1,7 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
+<!-- entry.body|linebreaks|safe -->
 <div class="">
-  HELLO
+  HELP
+  {% for entry in entries %}
+
+    <h1>{{ entry.title }}</h1>
+    <h3>{{ entry.sub_title }}</h3>
+    <h5>{{ entry.author }}</h5>
+    <h6>{{ entry.pub_date }}</h6>
+
+    <div class="">
+      {{ entry.body|safe }}
+    </div>
+  {% endfor %}
 </div>
 {% endblock %}
