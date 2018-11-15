@@ -1,2 +1,2 @@
 from .entry import Entry
-from .image import Image
+from .image import EntryImage

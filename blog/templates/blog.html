@@ -7,7 +7,7 @@
 
 {% block content %}
 <!-- entry.body|linebreaks|safe -->
-<div class="">
+<div class="col-xs-12 col-sm-9">
   {% for entry in entries %}
 
     <h1>{{ entry.title }}</h1>
@@ -21,14 +21,19 @@
 
     {% if entry.images.all %}
       {% for image in entry.images.all %}
-        <div class="entry__img">
-          <img src="{{ image.image.url }}" onclick="openModal('{{ image.image.url }}')" />
-        </div>
+
+        <img src="{{ image.image.url }}" onclick="openModal('{{ image.image.url }}')" />
+
       {% endfor %}
     {% endif %}
 
   {% endfor %}
 </div>
+
+<div class="col-xs-12 col-sm-3">
+  {% include './blog_sidebar.html' %}
+</div>
+
 {% endblock %}
 
 {% block footer %}

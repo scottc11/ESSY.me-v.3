@@ -1,9 +1,9 @@
 from django.contrib import admin
-from blog.models import Entry, Image
+from blog.models import Entry, EntryImage
 # Register your models here.
 
 class ImageInlineAdmin(admin.TabularInline):
-    model = Image
+    model = EntryImage
 
 class EntryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
