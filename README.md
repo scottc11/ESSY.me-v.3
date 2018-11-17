@@ -64,6 +64,10 @@ Now deploy the app to Heroku
 ```
 git push heroku master
 ```
+or you can deploy a branch
+```
+git push heroku testbranch:master
+```
 
 
 # ------- PACKAGES -------------
