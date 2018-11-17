@@ -64,3 +64,12 @@ Now deploy the app to Heroku
 ```
 git push heroku master
 ```
+or you can deploy a branch
+```
+git push heroku testbranch:master
+```
+
+
+# ------- PACKAGES -------------
+
+### [django_comments](https://django-contrib-comments.readthedocs.io/en/latest/quickstart.html)

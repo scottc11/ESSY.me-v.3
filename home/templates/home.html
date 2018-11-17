@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block header %}
+  {% include './header.html' %}
+{% endblock %}
+
 {% block content %}
 <section id="home" class="home">
 
@@ -53,6 +57,10 @@
 
 </section>
 
+{% endblock %}
 
-
+{% block footer %}
+<div class="col-xs-12">
+  {% include './footer.html' %}
+</div>
 {% endblock %}

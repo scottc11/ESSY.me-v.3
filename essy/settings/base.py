@@ -28,13 +28,18 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
+    'django_comments',
+    'tagging',
     'webpack_loader',
     'rest_framework',
     'home',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +71,10 @@ ROOT_URLCONF = 'essy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'home/templates')],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'home/templates'),
+            os.path.join(BASE_DIR, 'blog/templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'essy.context_processors.add_settings_to_templates', # passing settings vars to all templates
             ],
         },
     },
@@ -133,6 +142,6 @@ STATICFILES_DIRS = (
 
 DEFAULT_FILE_STORAGE = 'google.storage.googleCloud.GoogleCloudStorage'
 
-
+SITE_ID = 1
 
 print('-----------------------------')

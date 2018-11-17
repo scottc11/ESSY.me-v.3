@@ -2,8 +2,7 @@ from datetime import datetime
 from django.db import models
 from django.conf import settings
 from essy.storage import GoogleCloudStorage
-from .post import Post
-
+from home.models.post import Post
 
 def format_storage_path(instance, filename):
     post_slug = instance.post.slug

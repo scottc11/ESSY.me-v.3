@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+  {% include './blog_header.html' %}
+{% endblock %}
+
+{% block content %}
+<!-- entry.body|linebreaks|safe -->
+<div class="col-xs-12 col-sm-9 entry">
+  {% for entry in entries %}
+
+    <h1>{{ entry.title }}</h1>
+    <h3>{{ entry.sub_title }}</h3>
+    <h5>{{ entry.author }}</h5>
+    <h6>{{ entry.pub_date }}</h6>
+
+    <div class="">
+      {{ entry.body|safe }}
+    </div>
+
+    {% if entry.images.all %}
+      {% for image in entry.images.all %}
+
+        <img src="{{ image.image.url }}" onclick="openModal('{{ image.image.url }}')" />
+
+      {% endfor %}
+    {% endif %}
+
+  {% endfor %}
+</div>
+
+<div class="col-xs-12 col-sm-3">
+  {% include './blog_sidebar.html' %}
+</div>
+
+{% endblock %}
+
+{% block footer %}
+  {% include './blog_footer.html' %}
+{% endblock %}
