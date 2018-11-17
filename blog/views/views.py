@@ -7,6 +7,8 @@ def blog(request):
     context = { 'entries': entries }
     return render(request, 'blog.html', context)
 
-def post_detail(request, post_id):
-    post = get_object_or_404(Post, pk=post_id)
-    return render(request, 'blog/post.html', {'post': post})
+def entry_detail(request, id):
+    entries = Entry.objects.all()
+    entry = get_object_or_404(Entry, pk=id)
+    context = {'entry': entry, 'entries': entries}
+    return render(request, 'entry_detail.html', context)

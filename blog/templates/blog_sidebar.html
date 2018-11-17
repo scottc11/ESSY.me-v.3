@@ -1,7 +1,9 @@
+{% load static %}
+
 <div class="">
   <h2>Latest Posts</h2>
   {% for entry in entries %}
-    <h3><a href="#">{{ entry.title }}</a></h3>
+    <h3><a href="{% url 'entry_detail' entry.id %}">{{ entry.title }}</a></h3>
     <h6>{{ entry.pub_date }}</h6>
   {% endfor %}
 </div>
