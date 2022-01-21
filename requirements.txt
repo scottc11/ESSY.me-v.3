@@ -25,7 +25,7 @@ googleapis-common-protos==1.5.2
 gunicorn==19.7.1
 httplib2==0.10.3
 idna==2.5
-ipython==7.1.1
+ipython==7.16.3
 ipython-genutils==0.2.0
 jedi==0.13.1
 mots-vides==2015.5.11
